@@ -1,0 +1,20 @@
+GET http://localhost:8080/conversation
+Accept: */*
+Cache-Control: no-cache
+Authorization: 1|mENIfw3UFZg9Be3DoKNCXupI7eUxa2EPrwaCGTZz
+
+###
+
+GET http://localhost:8080/conversation
+Accept: */*
+Cache-Control: no-cache
+Authorization: Bearer 1|mENIfw3UFZg9Be3DoKNCXupI7eUxa2EPrwaCGTZz
+
+###
+
+GET http://localhost:8080/conversation
+Accept: */*
+Cache-Control: no-cache
+
+###
+
