@@ -5,6 +5,8 @@
                 <div class="card window">
                     <div class="card-items">
                         <div class="user-list">
+                            <Header :user="user"></Header>
+                            <Online></Online>
                             <UserList></UserList>
                         </div>
                         <div  class="messages">
@@ -17,20 +19,20 @@
     </div>
 </template>
 
-
 <script>
     import UserList from "./UserList";
     import Messages from "./Messages";
+    import Header from "./Header";
+    import Online from "./Online";
     export default {
-        components: {Messages, UserList},
+        components: {Online, Header, Messages, UserList},
+        props:['user'],
         methods:{
-
-        }
+        },
     }
 </script>
 <style scoped lang="scss">
 @import '../../sass/variables';
-    // Colors
     .card-items{
         display: flex;
         flex-direction: row;
@@ -38,11 +40,10 @@
         .user-list{
             width: 30%;
             padding:0;
-            background: $light_blue;
+            background: $bg_black;
         }
         .messages{
             width: 70%;
-            border-left: 1px solid #657db0;
         }
     }
     .window{

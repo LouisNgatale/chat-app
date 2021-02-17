@@ -10946,6 +10946,7 @@ a.text-dark:focus {
 
 .chat-window {
   max-height: 100vh;
+  width: 100%;
 }
 
 
