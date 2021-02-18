@@ -1,8 +1,11 @@
 <!--suppress ALL -->
 <template>
         <div class="message-container">
-            <div class="user-name">
+            <div v-if="!empty" class="user-name">
                 <p>{{ receiver_name }}</p>
+                <div @click="call">
+                    <img src="/images/videocall@2x.png" alt="">
+                </div>
             </div>
 
             <div  class="messages">
@@ -15,6 +18,8 @@
 
                 <!--  Load the messages from the database  -->
                 <div v-else id="messages">
+
+                    <video  id="video" autoplay></video>
 
                     <div v-for="message in messages" :key="message.id">
 
@@ -100,6 +105,21 @@ export default {
                     console.log(error)
                 })
         },
+      call: function (){
+          const video = document.getElementById('video');
+
+          const handleSuccess = function (stream){
+              video.srcObject = stream;
+              video.play
+          }
+
+          navigator.mediaDevices.getUserMedia({
+              audio: true,
+              video: true
+          }).then(stream => {
+              handleSuccess(stream)
+          })
+      },
       listen(){
           Echo.channel('messages.'+this.conversation_id)
             .listen('NewMessage',(message) => {
@@ -229,7 +249,22 @@ export default {
             font-size: 18px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            img{
+                height: 20px;
+                width: auto;
+            }
         }
+    }
+    #video-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,300px);
+        grid-auto-rows: 300px;
+    }
+    video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     p{
         margin: 0;

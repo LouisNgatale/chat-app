@@ -13,6 +13,11 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
     <select>
       <path>
@@ -23,23 +28,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e43ba920-39f6-4eb0-92f8-48ff4eceefca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/Icon feather-settings.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/Icon feather-settings@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/send.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/send@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Online.vue" afterDir="false" />
+    <list default="true" id="e43ba920-39f6-4eb0-92f8-48ff4eceefca" name="Default Changelist" comment="Updated the user interface to Dark Theme">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/videocall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/videocall@2x.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ChatWindow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ChatWindow.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Messages.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Messages.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/UserList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/UserList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,8 +236,17 @@
       <workItem from="1612608115169" duration="10431000" />
       <workItem from="1612633921149" duration="807000" />
       <workItem from="1613042808692" duration="726000" />
-      <workItem from="1613578845928" duration="12259000" />
+      <workItem from="1613578845928" duration="13261000" />
+      <workItem from="1613627000061" duration="3861000" />
     </task>
+    <task id="LOCAL-00001" summary="Updated the user interface to Dark Theme">
+      <created>1613595648535</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613595648535</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,9 +275,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Updated the user interface to Dark Theme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated the user interface to Dark Theme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611999169928">
@@ -301,25 +308,25 @@
     </state>
     <state x="526" y="209" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1613588718715" />
     <state x="740" y="294" key="FileChooserDialogImpl/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612634162335" />
-    <state width="1321" height="454" key="GridCell.Tab.0.bottom" timestamp="1613584250456">
+    <state width="1145" height="298" key="GridCell.Tab.0.bottom" timestamp="1613628204380">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1321" height="454" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613584250456" />
+    <state width="1145" height="298" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613628204380" />
     <state width="1875" height="288" key="GridCell.Tab.0.bottom/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612623897082" />
-    <state width="1321" height="454" key="GridCell.Tab.0.center" timestamp="1613584250456">
+    <state width="1145" height="298" key="GridCell.Tab.0.center" timestamp="1613628204379">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1321" height="454" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613584250456" />
+    <state width="1145" height="298" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613628204379" />
     <state width="1875" height="288" key="GridCell.Tab.0.center/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612623897079" />
-    <state width="1321" height="454" key="GridCell.Tab.0.left" timestamp="1613584250456">
+    <state width="1145" height="298" key="GridCell.Tab.0.left" timestamp="1613628204379">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1321" height="454" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613584250456" />
+    <state width="1145" height="298" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613628204379" />
     <state width="1875" height="288" key="GridCell.Tab.0.left/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612623897079" />
-    <state width="1321" height="454" key="GridCell.Tab.0.right" timestamp="1613584250456">
+    <state width="1145" height="298" key="GridCell.Tab.0.right" timestamp="1613628204379">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1321" height="454" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613584250456" />
+    <state width="1145" height="298" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613628204379" />
     <state width="1875" height="288" key="GridCell.Tab.0.right/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612623897080" />
     <state width="194" height="545" key="HiddenNamespacesPopup" timestamp="1612000106093">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -350,10 +357,10 @@
     </state>
     <state x="338" y="172" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1612191028961" />
     <state x="475" y="242" key="run.anything.popup/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612195601122" />
-    <state x="443" y="167" width="672" height="483" key="search.everywhere.popup" timestamp="1613594308129">
+    <state x="443" y="167" width="672" height="483" key="search.everywhere.popup" timestamp="1613628055959">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="443" y="167" width="672" height="483" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1613594308129" />
+    <state x="443" y="167" width="672" height="483" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1613628055959" />
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612620180461" />
   </component>
 </project>
