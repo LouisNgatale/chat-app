@@ -28,13 +28,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e43ba920-39f6-4eb0-92f8-48ff4eceefca" name="Default Changelist" comment="Updated the user interface to Dark Theme">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/videocall.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/videocall@2x.png" afterDir="false" />
+    <list default="true" id="e43ba920-39f6-4eb0-92f8-48ff4eceefca" name="Default Changelist" comment="Added video element">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Messages.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Messages.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +232,7 @@
       <workItem from="1612633921149" duration="807000" />
       <workItem from="1613042808692" duration="726000" />
       <workItem from="1613578845928" duration="13261000" />
-      <workItem from="1613627000061" duration="3861000" />
+      <workItem from="1613627000061" duration="5754000" />
     </task>
     <task id="LOCAL-00001" summary="Updated the user interface to Dark Theme">
       <created>1613595648535</created>
@@ -246,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613595648535</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added video element">
+      <created>1613631300633</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613631300633</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +282,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Updated the user interface to Dark Theme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated the user interface to Dark Theme" />
+    <MESSAGE value="Added video element" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added video element" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611999169928">
