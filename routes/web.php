@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,4 +29,4 @@ Route::get('/conversation', [App\Http\Controllers\ApiEndpoints::class, 'allConve
 Route::get('/getConversation/{id}', [App\Http\Controllers\ApiEndpoints::class, 'getConversation'])->name('home')->middleware('auth:sanctum');
 Route::post('/newConversation/{id}', [App\Http\Controllers\ApiEndpoints::class, 'createConversation'])->name('home');
 Route::post('/sendMessage', [App\Http\Controllers\ApiEndpoints::class, 'sendMessage'])->name('home');
-
+Route::post('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout']);

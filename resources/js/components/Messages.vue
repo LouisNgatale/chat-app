@@ -1,8 +1,11 @@
 <!--suppress ALL -->
 <template>
         <div class="message-container">
-            <div class="user-name">
+            <div v-if="!empty" class="user-name">
                 <p>{{ receiver_name }}</p>
+                <div @click="call">
+                    <img src="/images/videocall@2x.png" alt="">
+                </div>
             </div>
 
             <div  class="messages">
@@ -15,6 +18,8 @@
 
                 <!--  Load the messages from the database  -->
                 <div v-else id="messages">
+
+                    <video  id="video" autoplay></video>
 
                     <div v-for="message in messages" :key="message.id">
 
@@ -33,10 +38,13 @@
 
                 </div>
             </div>
-            <div class="txtMsg-container">
+            <div v-if="!empty" class="txtMsg-container">
                 <div class="input-group">
                     <input type="text" id="message_body" placeholder="New Message">
-                    <input type="submit" value="Send" @click="send">
+                    <div class="send" @click="send">
+                        <img src="/images/send@2x.png" alt="">
+                        <span>Send</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -97,6 +105,21 @@ export default {
                     console.log(error)
                 })
         },
+      call: function (){
+          const video = document.getElementById('video');
+
+          const handleSuccess = function (stream){
+              video.srcObject = stream;
+              video.play
+          }
+
+          navigator.mediaDevices.getUserMedia({
+              audio: true,
+              video: true
+          }).then(stream => {
+              handleSuccess(stream)
+          })
+      },
       listen(){
           Echo.channel('messages.'+this.conversation_id)
             .listen('NewMessage',(message) => {
@@ -130,7 +153,7 @@ export default {
         height: 100%;
         .txtMsg-container{
             height: 10%;
-            background: $white;
+            background: $bg_dark;
             display: flex;
             justify-content: center;
             .input-group{
@@ -140,25 +163,37 @@ export default {
                 input[type="text"]{
                     flex-grow: 1;
                     align-items: center;
+                    color: $color;
                     border-radius: 20px;
-                    background: $white_blue;
-                    border: 0;
+                    background: $bg_light;
+                    border: 1px solid $border;
                     padding: 5px 10px;
                     outline: none;
                     margin-right:10px;
                 }
-                input[type="submit"]{
-                    color: $dark_blue;
+                .send{
                     border-radius: 10px;
-                    border: 2px solid $dark_blue;
-                    outline: none;
-                    padding: 5px 10px;
-                    width: 100px;
+                    border: 2px solid $border;
+                    padding: 5px 15px;
+                    width: 50px;
+                    background: $bg_black;
+                    height: 40px;
                     transition: border 400ms;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all 400ms;
+                    span{
+                        display: none;
+                    }
                     &:hover{
-                        background: $dark_blue;
+                        background: $sent;
                         color: $white;
                         transition: all 400ms;
+                    }
+                    img{
+                        height: 20px;
+                        width: auto;
                     }
                 }
             }
@@ -166,8 +201,9 @@ export default {
         .messages{
             flex-grow: 1;
             padding: 2px 20px;
-            background: $white_blue;
+            background: $bg_dark;
             overflow: auto;
+            color: $color;
             .empty-container{
                 display: flex;
                 justify-content: center;
@@ -182,9 +218,9 @@ export default {
             .received{
                 max-width: 30%;
                 overflow-x: hidden;
-                background: white;
+                background: $received;
                 padding: 0 10px;
-                border-radius: 10px;
+                border-radius: 10px 10px 10px 0;
                 float: left;
                 clear: both;
                 margin: 5px 0;
@@ -193,9 +229,9 @@ export default {
             .sent{
                 max-width: 30%;
                 overflow-x: hidden;
-                background: $dark_blue;
+                background: $sent;
                 padding: 0 10px;
-                border-radius: 10px;
+                border-radius: 10px 10px 0 10px;
                 float: right;
                 clear: both;
                 margin: 5px 0;
@@ -206,14 +242,29 @@ export default {
         .user-name{
             width: 100%;
             min-height: 50px;
-            background: $white_blue;
+            background: $bg_dark;
             padding: 0 10px;
-            border-bottom: 1px solid $grey;
+            border-bottom: 1px solid $border;
             color: $user-name;
             font-size: 18px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            img{
+                height: 20px;
+                width: auto;
+            }
         }
+    }
+    #video-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,300px);
+        grid-auto-rows: 300px;
+    }
+    video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     p{
         margin: 0;

@@ -1,12 +1,13 @@
 <template>
     <div>
         <div class="header">
-            <h4>Inbox</h4>
+            <span>Chats</span>
+            <input type="text" placeholder="Search">
         </div>
         <div class="user-wrapper" v-for="user in users" :name="user.Participant_A" :id="user.Conversation_Id" :receiver_id="user.Participant_A_id" v-on:click="clicked">
             <div class="user" id="user" >
                 <div class="user-img">
-                    <img class="rounded-circle img-thumbnail w-100 mx-auto d-block" src="/images/blank.png" alt="">
+                    <img class="" src="/images/blank.png" alt="">
                 </div>
                 <div class="user-placeholder">
                     <div class="user-name">
@@ -19,8 +20,6 @@
             </div>
                 <hr>
         </div>
-
-
     </div>
 </template>
 
@@ -68,23 +67,34 @@ export default {
 
 <style scoped lang="scss">
 @import '../../sass/variables';
-
     p{
         margin: 0;
     }
     .header{
-        background: $light_blue;
-        color: white;
+        background: $bg_black;
+        color: $color;
         padding: 10px;
-        height: 50px;
+        display: flex;
+        flex-direction: column;
+        span{
+            padding-bottom: 10px;
+        }
+        input{
+            border: none;
+            background: $bg_dark;
+            border-radius: 5px;
+            padding: 5px;
+            outline: none;
+            color: $sub_heading;
+        }
     }
     .user{
         display: flex;
         height: 60px;
         width: 100%;
-        color: #E9E9EB;
+        color: $color;
         &:hover{
-            background: $hover_blue;
+            background: $bg_light;
             cursor: pointer;
         }
         .user-img{
@@ -92,7 +102,9 @@ export default {
             margin: auto 5px;
             padding: 5px;
             img{
-
+                height: 40px;
+                width: 40px;
+                border-radius: 100%;
             }
         }
         .user-placeholder{

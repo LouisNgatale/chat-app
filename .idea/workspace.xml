@@ -23,12 +23,18 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+<<<<<<< HEAD
         <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+=======
+        <item name="BRANCH:ui_update" type="e8cecc67:BranchNodeDescriptor" />
+>>>>>>> 24317517e57786ad6e6c2bae7f5028637f3b1e79
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e43ba920-39f6-4eb0-92f8-48ff4eceefca" name="Default Changelist" comment="" />
+    <list default="true" id="e43ba920-39f6-4eb0-92f8-48ff4eceefca" name="Default Changelist" comment="Added video element">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +50,14 @@
         <option value="Vue Single File Component" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -169,10 +183,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../laravel/learning" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -217,8 +232,27 @@
       <workItem from="1612354252929" duration="670000" />
       <workItem from="1612380618854" duration="185000" />
       <workItem from="1612431166786" duration="1691000" />
-      <workItem from="1612608115169" duration="8875000" />
+      <workItem from="1612608115169" duration="10431000" />
+      <workItem from="1612633921149" duration="807000" />
+      <workItem from="1613042808692" duration="726000" />
+      <workItem from="1613578845928" duration="13261000" />
+      <workItem from="1613627000061" duration="5754000" />
     </task>
+    <task id="LOCAL-00001" summary="Updated the user interface to Dark Theme">
+      <created>1613595648535</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613595648535</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added video element">
+      <created>1613631300633</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613631300633</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,13 +263,39 @@
       <map>
         <entry key="MAIN">
           <value>
+<<<<<<< HEAD
             <State />
+=======
+            <State>
+              <option name="BEK_SORT_TYPE" value="1" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="ui_update" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+>>>>>>> 24317517e57786ad6e6c2bae7f5028637f3b1e79
           </value>
         </entry>
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Updated the user interface to Dark Theme" />
+    <MESSAGE value="Added video element" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added video element" />
+  </component>
+>>>>>>> 24317517e57786ad6e6c2bae7f5028637f3b1e79
   <component name="WindowStateProjectService">
     <state x="552" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611999169928">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -257,9 +317,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="589" y="300" key="EditFileWatcherDialog/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1611936646376" />
-    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1612005801771">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="526" y="209" key="FileChooserDialogImpl" timestamp="1613588718715">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+<<<<<<< HEAD
     <state x="740" y="294" key="FileChooserDialogImpl/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612005801771" />
     <state width="1321" height="454" key="GridCell.Tab.0.bottom" timestamp="1613647175642">
       <screen x="0" y="0" width="1366" height="768" />
@@ -281,6 +342,30 @@
     </state>
     <state width="1321" height="454" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613647175642" />
     <state width="1636" height="456" key="GridCell.Tab.0.right/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612621980032" />
+=======
+    <state x="526" y="209" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1613588718715" />
+    <state x="740" y="294" key="FileChooserDialogImpl/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612634162335" />
+    <state width="1145" height="298" key="GridCell.Tab.0.bottom" timestamp="1613628204380">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1145" height="298" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613628204380" />
+    <state width="1875" height="288" key="GridCell.Tab.0.bottom/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612623897082" />
+    <state width="1145" height="298" key="GridCell.Tab.0.center" timestamp="1613628204379">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1145" height="298" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613628204379" />
+    <state width="1875" height="288" key="GridCell.Tab.0.center/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612623897079" />
+    <state width="1145" height="298" key="GridCell.Tab.0.left" timestamp="1613628204379">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1145" height="298" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613628204379" />
+    <state width="1875" height="288" key="GridCell.Tab.0.left/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612623897079" />
+    <state width="1145" height="298" key="GridCell.Tab.0.right" timestamp="1613628204379">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1145" height="298" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613628204379" />
+    <state width="1875" height="288" key="GridCell.Tab.0.right/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612623897080" />
+>>>>>>> 24317517e57786ad6e6c2bae7f5028637f3b1e79
     <state width="194" height="545" key="HiddenNamespacesPopup" timestamp="1612000106093">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -289,6 +374,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="252" y="167" width="1340" height="711" key="SettingsEditor/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612206715384" />
+    <state x="275" y="112" key="Vcs.Push.Dialog.v2" timestamp="1613583114811">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="275" y="112" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1613583114811" />
     <state x="842" y="424" width="311" height="263" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1612099274604">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -297,15 +386,19 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="883" y="485" key="com.intellij.database.run.ParametersPanel.Standalone/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612097115248" />
+    <state x="500" y="293" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613595264897">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="500" y="293" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1613595264897" />
     <state x="475" y="242" key="run.anything.popup" timestamp="1612195601122">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="338" y="172" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1612191028961" />
     <state x="475" y="242" key="run.anything.popup/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612195601122" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1612620180461">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="443" y="167" width="672" height="483" key="search.everywhere.popup" timestamp="1613628055959">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="443" y="167" width="672" height="483" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1612431655111" />
+    <state x="443" y="167" width="672" height="483" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1613628055959" />
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612620180461" />
   </component>
 </project>
