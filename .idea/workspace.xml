@@ -3,6 +3,30 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e43ba920-39f6-4eb0-92f8-48ff4eceefca" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,6 +161,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1nkOx5wUmW9EpYAGJpzhZCtU2L0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -197,6 +224,18 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="552" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611999169928">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -222,25 +261,25 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612005801771" />
-    <state width="1636" height="456" key="GridCell.Tab.0.bottom" timestamp="1612621980032">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1321" height="454" key="GridCell.Tab.0.bottom" timestamp="1613647175642">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1145" height="300" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1612432534759" />
+    <state width="1321" height="454" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1613647175642" />
     <state width="1636" height="456" key="GridCell.Tab.0.bottom/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612621980032" />
-    <state width="1636" height="456" key="GridCell.Tab.0.center" timestamp="1612621980032">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1321" height="454" key="GridCell.Tab.0.center" timestamp="1613647175642">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1145" height="300" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1612432534759" />
+    <state width="1321" height="454" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1613647175642" />
     <state width="1636" height="456" key="GridCell.Tab.0.center/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612621980032" />
-    <state width="1636" height="456" key="GridCell.Tab.0.left" timestamp="1612621980032">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1321" height="454" key="GridCell.Tab.0.left" timestamp="1613647175642">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1145" height="300" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1612432534759" />
+    <state width="1321" height="454" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1613647175642" />
     <state width="1636" height="456" key="GridCell.Tab.0.left/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612621980032" />
-    <state width="1636" height="456" key="GridCell.Tab.0.right" timestamp="1612621980032">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1321" height="454" key="GridCell.Tab.0.right" timestamp="1613647175642">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1145" height="300" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1612432534759" />
+    <state width="1321" height="454" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1613647175642" />
     <state width="1636" height="456" key="GridCell.Tab.0.right/543.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1612621980032" />
     <state width="194" height="545" key="HiddenNamespacesPopup" timestamp="1612000106093">
       <screen x="0" y="0" width="1920" height="1080" />
