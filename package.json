@@ -20,6 +20,7 @@
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.32.5",
         "sass-loader": "^8.0.2",
+        "simple-peer": "^9.9.3",
         "vue": "^2.5.17",
         "vue-loader": "^15.9.5",
         "vue-template-compiler": "^2.6.10"
