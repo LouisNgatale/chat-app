@@ -30,3 +30,6 @@ Route::get('/getConversation/{id}', [App\Http\Controllers\ApiEndpoints::class, '
 Route::post('/newConversation/{id}', [App\Http\Controllers\ApiEndpoints::class, 'createConversation'])->name('home');
 Route::post('/sendMessage', [App\Http\Controllers\ApiEndpoints::class, 'sendMessage'])->name('home');
 Route::post('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout']);
+Route::post('/makecall/{id}', [\App\Http\Controllers\VideoChatController::class, 'makeCall']);
+Route::post('/cancelCall/{id}', [\App\Http\Controllers\VideoChatController::class, 'cancel']);
+Route::post('/acceptCall/{id}', [\App\Http\Controllers\VideoChatController::class, 'accept']);

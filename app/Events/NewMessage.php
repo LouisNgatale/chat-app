@@ -20,19 +20,12 @@ class NewMessage implements ShouldBroadcast{
     public $conversation_id;
     public $receiver_id;
 
-    /**
-     * Create a new event instance.
-     *
-     * @param  $message
-     * @param  $conversation_id
-     */
+
     public function __construct($message,$receiver_id,$conversation_id) {
-        //
         $this->message = $message;
         $this->conversation_id = $conversation_id;
         $this->receiver_id = $receiver_id;
     }
-
 
     public function broadcastOn(){
         return new Channel('messages.'.$this->conversation_id);
