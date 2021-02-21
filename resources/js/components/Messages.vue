@@ -563,7 +563,6 @@ export default {
                 background: $bg_dark;
                 background-position: center; /* Center the image */
                 background-repeat: no-repeat; /* Do not repeat the image */
-                padding: 0;
                 background-size: cover; /* Resize the background image to cover the entire container */
                 width: 100%;
                 align-items: center;
