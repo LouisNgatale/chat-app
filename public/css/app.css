@@ -12,7 +12,7 @@
   --blue: #3490dc;
   --indigo: #6574cd;
   --purple: #9561e2;
-  --pink: #f66d9b;
+  --pink: #FF4858;
   --red: #e3342f;
   --orange: #f6993f;
   --yellow: #ffed4a;
@@ -534,7 +534,7 @@ mark,
 
 code {
   font-size: 87.5%;
-  color: #f66d9b;
+  color: #FF4858;
   word-wrap: break-word;
 }
 
@@ -10947,6 +10947,76 @@ a.text-dark:focus {
 .chat-window {
   max-height: 100vh;
   width: 100%;
+}
+
+.register,
+.login {
+  background: url(/images/login_background.png?b047a08f280bc9225b0a14589cb8b09c) no-repeat center;
+  background-size: 100% 100%;
+  /* Resize the background image to cover the entire container */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.register .back_cover,
+.login .back_cover {
+  width: 90%;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 80%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.34);
+}
+
+.register .back_cover .right_banner,
+.login .back_cover .right_banner {
+  width: 50%;
+  background: url(/images/city_image.png?3739da96a1314a56674158ab066fbdeb) no-repeat center;
+  background-size: 100% 100%;
+  color: white;
+  display: flex;
+  justify-content: start;
+  padding: 10px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.register .back_cover .right_banner .welcome_description,
+.login .back_cover .right_banner .welcome_description {
+  width: 70%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 20px;
+}
+
+.register .back_cover .left_banner,
+.login .back_cover .left_banner {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  padding: 50px;
+}
+
+.register .back_cover .left_banner .auth_card,
+.login .back_cover .left_banner .auth_card {
+  box-shadow: 0 8px 6px rgba(0, 0, 0, 0.3);
+  padding: 30px 60px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.register .back_cover .left_banner .auth_card .btn,
+.register .back_cover .left_banner .auth_card btn-primary,
+.login .back_cover .left_banner .auth_card .btn,
+.login .back_cover .left_banner .auth_card btn-primary {
+  background: #e3342f;
+  color: white;
+  font-weight: bold;
 }
 
 

@@ -547,7 +547,6 @@ export default {
         }
         .messages{
             flex-grow: 1;
-            padding: 2px ;
             background: url("/images/default_bg.png");
             background-position: center; /* Center the image */
             background-repeat: no-repeat; /* Do not repeat the image */
@@ -563,7 +562,6 @@ export default {
                 background: $bg_dark;
                 background-position: center; /* Center the image */
                 background-repeat: no-repeat; /* Do not repeat the image */
-                padding: 0;
                 background-size: cover; /* Resize the background image to cover the entire container */
                 width: 100%;
                 align-items: center;

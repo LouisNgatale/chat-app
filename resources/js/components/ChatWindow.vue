@@ -1,18 +1,14 @@
 <template>
     <div>
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="card window">
-                    <div class="card-items">
-                        <div class="user-list">
-                            <Header :user="user"></Header>
-                            <Online></Online>
-                            <UserList></UserList>
-                        </div>
-                        <div  class="messages">
-                            <Messages></Messages>
-                        </div>
-                    </div>
+        <div class="window">
+            <div class="card-items">
+                <div class="user-list">
+                    <Header :user="user"></Header>
+                    <Online></Online>
+                    <UserList></UserList>
+                </div>
+                <div  class="messages">
+                    <Messages></Messages>
                 </div>
             </div>
         </div>

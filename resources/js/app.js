@@ -20,6 +20,8 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('chat-window', require('./components/ChatWindow.vue').default);
+Vue.component('welcome', require('./components/AuthPages/Welcome-description').default);
+Vue.component('register', require('./components/AuthPages/Register').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
