@@ -81,8 +81,8 @@
             </div>
             <div v-if="!empty" class="txtMsg-container">
                 <div class="input-group">
-                    <input type="text" id="message_body" placeholder="New Message">
-                    <div class="send" @click="send">
+                    <input type="text" @keyup.enter="send" id="message_body" placeholder="New Message">
+                    <div class="send"  @click="send">
                         <img src="/images/send@2x.png" alt="">
                         <span>Send</span>
                     </div>
@@ -330,6 +330,7 @@ export default {
 
 
       },
+
       async startPeers (stream){
           this.videoCallParams.stream = stream
           // Start the receiver peer
@@ -547,7 +548,6 @@ export default {
         }
         .messages{
             flex-grow: 1;
-            padding: 2px ;
             background: url("/images/default_bg.png");
             background-position: center; /* Center the image */
             background-repeat: no-repeat; /* Do not repeat the image */
@@ -675,12 +675,12 @@ export default {
         }
     }
 
-
     #partnerVideo{
         height: 100vh;
         display: none;
         margin: 0 auto;
     }
+
     #video{
         width: 25%;
         height: auto;
@@ -703,6 +703,7 @@ export default {
         background-color: rgb(0,0,0); /* Fallback color */
         background-color: rgba(0,0,0,1); /* Black w/ opacity */
     }
+
     .caller_name{
         position: absolute;
         top: 20px;
@@ -712,6 +713,7 @@ export default {
         padding: 5px 10px;
         border-radius: 10px;
     }
+
     .chat_controls{
         position: absolute;
         bottom: 20px;
@@ -725,16 +727,19 @@ export default {
             bottom: 30px;
             transition: all .3s;
         }
+
         .cancel_call{
             height: 100%;
             width: auto;
             margin:  auto;
         }
+
         .chat_box{
             height: 100%;
             width: auto;
             margin: auto;
         }
+
     }
 
     /* Modal Content/Box */
@@ -745,6 +750,7 @@ export default {
         display: flex;
         height: 100vh;
     }
+
     .control{
         height: 80px;
         overflow: hidden;
@@ -752,16 +758,16 @@ export default {
         padding: 5px;
     }
 
-
     p{
             margin: 0;
         }
-/* width */
+
 /* width */
 ::-webkit-scrollbar {
     width:8px;
     border-radius: 10px;
 }
+
 ::-webkit-scrollbar:hover {
     width:10px;
     border-radius: 10px;
@@ -781,7 +787,6 @@ export default {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
-
 }
-</style>
 
+</style>

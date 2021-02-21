@@ -100,4 +100,10 @@ class ApiEndpoints extends Controller{
         return $message_body;
     }
 
+    public function search($keyword) {
+        $users = User::where('name', 'LIKE', "%$keyword%")->get();
+
+        return $users;
+    }
+
 }

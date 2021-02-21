@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="row justify-content-center">
-            <div class="col-md-12">
+            <div class="col-12">
                 <div class="card window">
                     <div class="card-items">
                         <div class="user-list">
@@ -33,6 +33,9 @@
 </script>
 <style scoped lang="scss">
 @import '../../sass/variables';
+    .col-12{
+        padding: 0;
+    }
     .card-items{
         display: flex;
         flex-direction: row;
@@ -46,7 +49,13 @@
             width: 70%;
         }
     }
+    .card{
+        padding: 0;
+    }
     .window{
         height: 100vh;
+        margin: 0;
+        border: 0;
+        padding: 0;
     }
 </style>

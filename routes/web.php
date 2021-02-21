@@ -33,3 +33,4 @@ Route::post('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logo
 Route::post('/makecall/{id}', [\App\Http\Controllers\VideoChatController::class, 'makeCall']);
 Route::post('/cancelCall/{id}', [\App\Http\Controllers\VideoChatController::class, 'cancel']);
 Route::post('/acceptCall/{id}', [\App\Http\Controllers\VideoChatController::class, 'accept']);
+Route::get('/search/{name}', [\App\Http\Controllers\ApiEndpoints::class, 'search']);

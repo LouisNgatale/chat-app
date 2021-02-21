@@ -2,7 +2,16 @@
     <div>
         <div class="header">
             <span>Chats</span>
-            <input type="text" placeholder="Search">
+            <div class="search_box">
+                <input  v-model="search" type="text" placeholder="Search">
+
+                <div class="search_results" v-if="searchedUsers">
+                    <div v-for="user in searchedUsers">
+                        <span>{{ user.name }}</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <div class="user-wrapper" v-for="user in users" :name="user.Participant_A" :id="user.Conversation_Id" :receiver_id="user.Participant_A_id" v-on:click="clicked">
             <div class="user" id="user" >
@@ -28,14 +37,18 @@ import { bus } from '../app'
 
 export default {
     name: "UserList",
+
     data(){
         return{
             userId:"test",
             users:[],
             conversation_payload:[],
-            logged_user: ""
+            logged_user: "",
+            search:'',
+            searchedUsers:[]
         }
     },
+
     methods:{
         clicked: function ()  {
             let target = event.target;
@@ -51,8 +64,28 @@ export default {
                 receiver_id: receiver_id
             }
             bus.$emit('updateChatWindow',payload);
+        },
+
+        results:function (){
+            if (this.search){
+                 axios.get('/search/'+this.search)
+                    .then((response)=>{
+                          this.searchedUsers =  response.data
+                    }).catch((error)=>{
+                        console.log(error);
+                    });
+            }else {
+                this.searchedUsers = ""
+            }
         }
     },
+
+    watch: {
+        search(after, before) {
+            this.results()
+        }
+    },
+
     created() {
         axios.get('/conversation').then((response)=>{
             this.users = response.data.Users;
@@ -63,7 +96,6 @@ export default {
     }
 }
 </script>
-
 
 <style scoped lang="scss">
 @import '../../sass/variables';
@@ -79,6 +111,9 @@ export default {
         span{
             padding-bottom: 10px;
         }
+        .search_box{
+            width: 100%;
+        }
         input{
             border: none;
             background: $bg_dark;
@@ -86,6 +121,12 @@ export default {
             padding: 5px;
             outline: none;
             color: $sub_heading;
+        }
+        .search_results{
+            background: $bg_dark;
+            padding: 10px;
+            margin-top: 5px;
+            z-index: 1;
         }
     }
     .user{
