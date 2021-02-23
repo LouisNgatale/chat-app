@@ -18,6 +18,9 @@ class CreateConversationsUsersPivot extends Migration
             $table->unsignedBigInteger('users_id');
             $table->unsignedBigInteger('conversations_id');
             $table->timestamps();
+
+            $table->index('users_id');
+            $table->index('conversations_id');
         });
     }
 

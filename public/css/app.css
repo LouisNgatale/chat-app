@@ -11005,7 +11005,7 @@ a.text-dark:focus {
 .register .back_cover .left_banner .auth_card,
 .login .back_cover .left_banner .auth_card {
   box-shadow: 0 8px 6px rgba(0, 0, 0, 0.3);
-  padding: 30px 60px;
+  padding: 20px 60px;
   border-radius: 5px;
   margin: auto;
 }
@@ -11017,6 +11017,66 @@ a.text-dark:focus {
   background: #e3342f;
   color: white;
   font-weight: bold;
+}
+
+.profile_finish {
+  background: #27272B;
+  height: 100vh;
+  color: #FFFFFF;
+}
+
+.prof {
+  border-radius: 100%;
+}
+
+.status,
+.countries,
+.bio {
+  background: #3E3E3E;
+  color: #FFFFFF;
+  border: none;
+}
+
+.status:focus,
+.countries:focus,
+.bio:focus {
+  background: #3E3E3E;
+  outline: #707070;
+  color: #FFFFFF;
+}
+
+.datepicker {
+  background: #3E3E3E;
+  color: #FFFFFF;
+  border: none;
+}
+
+.datepicker:focus {
+  background: #3E3E3E;
+  outline: #707070;
+  color: #FFFFFF;
+}
+
+.button {
+  background: #258C60;
+  color: #FFFFFF;
+  border: none;
+}
+
+.button:focus {
+  background: #3E3E3E;
+  outline: #707070;
+  color: #FFFFFF;
+}
+
+.button:hover {
+  background: #35cb87;
+  outline: #707070;
+  color: #FFFFFF;
+}
+
+.file {
+  display: none;
 }
 
 

@@ -5,11 +5,11 @@
             <div class="search_box">
                 <input  v-model="search" type="text" placeholder="Search">
 
-                <div class="search_results" v-if="searchedUsers">
-                    <div v-for="user in searchedUsers">
-                        <span>{{ user.name }}</span>
-                    </div>
-                </div>
+<!--                <div class="search_results" v-if="searchedUsers">-->
+<!--                    <div v-for="user in searchedUsers">-->
+<!--                        <span>{{ user.name }}</span>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
 
         </div>

@@ -3,7 +3,7 @@
         <div class="window">
             <div class="card-items">
                 <div class="user-list">
-                    <Header :user="user"></Header>
+                    <Header :user="user" :status="status" :image="image"></Header>
                     <Online></Online>
                     <UserList></UserList>
                 </div>
@@ -22,7 +22,7 @@
     import Online from "./Online";
     export default {
         components: {Online, Header, Messages, UserList},
-        props:['user'],
+        props:['user','status','image'],
         methods:{
         },
     }

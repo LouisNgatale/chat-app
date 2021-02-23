@@ -13,10 +13,13 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "intervention/image": "^2.5",
+        "khsing/world": "^0.9.0",
         "laravel/framework": "^8.12",
         "laravel/sanctum": "^2.9",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
+        "monarobase/country-list": "^3.2",
         "pusher/pusher-php-server": "^4.1"
     },
     "require-dev": {
@@ -41,7 +44,7 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Database\\Seeders\\": "database/Seeders/"
         }
     },
     "autoload-dev": {

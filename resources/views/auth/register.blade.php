@@ -5,42 +5,63 @@
     <div class="back_cover">
         <div class="left_banner container">
             <div class="auth_card border-top ">
+
                 <h4>Create new account</h4>
+
                 <div class="pl-3 pr-3 pt-2">
+
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+                        <div class="form-group ">
+
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <div>
+                                    <input id="firstName" type="text" placeholder="First name" class="form-control @error('firstName') is-invalid @enderror" name="firstName" value="{{ old('firstName') }}" required autocomplete="firstName" autofocus>
+
+                                    @error('firstName')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="">
+                                    <input id="secondName" placeholder="Second Name" type="text" class="form-control @error('secondName') is-invalid @enderror" name="secondName" value="{{ old('secondName') }}" required autocomplete="secondName" autofocus>
+
+                                    @error('secondName')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <input id="email" type="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+
                         <div class="form-group">
-                            <div class="">
-                                <input id="name" type="text" placeholder="First name" class="form-control @error('firstName') is-invalid @enderror" name="firstName" value="{{ old('firstName') }}" required autocomplete="firstName" autofocus>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">@</div>
+                                </div>
 
-                                @error('firstName')
+                                <input id="userName" placeholder="Username" type="text" class="form-control @error('userName') is-invalid @enderror" name="userName" required autocomplete="username">
+
+                                @error('userName')
                                 <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group ">
-                            <div class="">
-                                <input id="secondName" placeholder="Second Name" type="text" class="form-control @error('secondName') is-invalid @enderror" name="secondName" value="{{ old('secondName') }}" required autocomplete="secondName" autofocus>
-
-                                @error('secondName')
-                                <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group ">
-                            <div class="">
-                                <label for="email"></label><input id="email" type="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
+                                                <strong>{{ $message }}</strong>
+                                            </span>
                                 @enderror
                             </div>
                         </div>
@@ -66,7 +87,7 @@
                         <div class="form-group row mb-0">
                             <div class="w-100 col pl-2 pr-2">
                                 <button type="submit" class="w-100 btn">
-                                    {{ __('Continue') }}
+                                    {{ __('Register') }}
                                 </button>
                             </div>
                         </div>
@@ -76,8 +97,11 @@
                     <a class="col text-center btn-link" href="{{ route('login') }}">
                         {{ __('Already have an account? Login') }}
                     </a>
+
                 </div>
+
             </div>
+
         </div>
 
         <div class="right_banner">

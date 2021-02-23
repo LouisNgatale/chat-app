@@ -7,12 +7,13 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+
+
 .chat-window{
     @import 'variables';
     max-height: 100vh;
     width: 100%;
 }
-
 .register,
 .login{
     background: url("public/images/AuthPages/login_background.png") no-repeat center;
@@ -55,7 +56,7 @@
             padding: 50px;
             .auth_card{
                 box-shadow: 0 8px 6px rgba(0, 0, 0, 0.3);
-                padding: 30px 60px;
+                padding: 20px 60px;
                 border-radius: 5px;
                 margin: auto;
                 .btn, btn-primary{
@@ -66,4 +67,55 @@
             }
         }
     }
+}
+
+.profile_finish{
+    background: $bg_light;
+    height: 100vh;
+    color: $color;
+    overflow: hidden;
+}
+.prof{
+    border-radius: 100%;
+}
+.status,
+.countries,
+.bio{
+    background: $bg_medium;
+    color: $color;
+    border: none;
+    &:focus{
+        background: $bg_medium;
+        outline: $border;
+        color: $color;
+    }
+}
+.datepicker{
+    background: $bg_medium;
+    color: $color;
+    border: none;
+    &:focus{
+        background: $bg_medium;
+        outline: $border;
+        color: $color;
+    }
+}
+.button{
+    background: $online;
+    color: $color;
+    border: none;
+    &:focus{
+        background: $bg_medium;
+        outline: $border;
+        color: $color;
+    }
+    &:hover{
+        background: $online2;
+        outline: $border;
+        color: $color;
+    }
+}
+
+.file{
+    display: none;
 }

@@ -50,7 +50,7 @@ class ApiEndpoints extends Controller{
         foreach ($ids_array as $id_array){
             $user_name = json_decode($this->getUserName($authenticated_user, $id_array),true);
             $users[$i] = array(
-                'Participant_A' => $user_name[0]['name'],
+                'Participant_A' => $user_name[0]['firstName'],
                 'Participant_A_id' => $user_name[0]['id'],
                 'Conversation_Id' => $ids_array[$i]
             );
@@ -71,7 +71,7 @@ class ApiEndpoints extends Controller{
             ->join('conversations', 'conversations.id', '=', 'conversations_users_pivot.conversations_id')
             ->where('conversations_users_pivot.users_id', '!=', $authenticated_user)
             ->where('conversations_users_pivot.conversations_id', '=', $conversation_id)
-            ->select('users.name','users.id')
+            ->select('users.firstName','users.id')
             ->get();
     }
 

@@ -18,7 +18,12 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
+        'firstName',
+        'secondName',
+        'userName',
+        'phoneNumber',
+        'gender',
+        'birthDate',
         'email',
         'password',
     ];
@@ -45,6 +50,36 @@ class User extends Authenticatable
     public function conversations() {
         return   $this->belongsToMany(Conversations::class,'conversations_users_pivot',
             'conversations_id','users_id');
+    }
+
+    public function profile() {
+        return $this->hasOne(Profile::class);
+    }
+
+    public function posts() {
+        return $this->hasMany(Post::class);
+    }
+
+    public function work() {
+        return $this->hasManyThrough(
+            Work::class,
+            Profile::class,
+            'user_id',
+            'profile_id',
+            'id',
+            'id'
+        );
+    }
+
+    public function address() {
+        return $this->hasManyThrough(
+          Address::class,
+          Profile::class,
+            'user_id',
+            'profile_id',
+            'id',
+            'id'
+        );
     }
 
 }

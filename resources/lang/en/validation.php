@@ -134,6 +134,9 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'userName' => [
+            'userName' => 'Username taken',
+        ],
     ],
 
     /*

@@ -21,7 +21,36 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth:sanctum');
+
+
+
+
+Route::group(['middleware'=>'auth'],function (){
+    //Completed Registration
+    Route::group(['middleware' => ['complete_registration']], function (){
+        Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])
+            ->name('home')
+            ->middleware('auth:sanctum');
+    });
+
+   Route::post('/create-profile',
+       [\App\Http\Controllers\ProfileController::class, 'store']
+   )->name('create-profile');
+
+   Route::get('/register/profile',function (){
+        return view('auth.create_profile');
+   })->name('register-profile');
+});
+
+
+
+
+
+
+
+
+
+
 
 //Api Endpoints
 Route::get('/allUsers', [App\Http\Controllers\ApiEndpoints::class, 'allUsers'])->name('home');
