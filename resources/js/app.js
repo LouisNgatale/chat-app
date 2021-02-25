@@ -19,9 +19,20 @@ window.Vue = require('vue').default;
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+//Slots
+Vue.component('slot_button', require('./components/slots/Button').default);
+
 Vue.component('chat-window', require('./components/ChatWindow.vue').default);
 Vue.component('welcome', require('./components/AuthPages/Welcome-description').default);
 Vue.component('register', require('./components/AuthPages/Register').default);
+
+//Social Components
+Vue.component('Createpost', require('./components/Social/middle_panel/Createpost').default);
+Vue.component('Profile', require('./components/Social/left_panel/Profile').default);
+Vue.component('Navbar', require('./components/Social/Navbar').default);
+Vue.component('Posts', require('./components/Social/middle_panel/posts/Post').default);
+Vue.component('Trending', require('./components/Social/right_panel/Trending').default);
+Vue.component('Friends', require('./components/Social/right_panel/Friends').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

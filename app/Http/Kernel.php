@@ -4,6 +4,7 @@ namespace App\Http;
 
 use App\Http\Middleware\AuthKey;
 use App\Http\Middleware\CheckRegistrationCompletedMiddleware;
+use App\Http\Middleware\CreateProfileMiddleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 use Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful;
 use Laravel\Sanctum\Sanctum;
@@ -68,6 +69,7 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'complete_registration' => CheckRegistrationCompletedMiddleware::class
+        'complete_registration' => CheckRegistrationCompletedMiddleware::class,
+        'create_profile' => CreateProfileMiddleware::class,
     ];
 }

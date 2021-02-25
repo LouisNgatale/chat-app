@@ -11080,6 +11080,16 @@ a.text-dark:focus {
   display: none;
 }
 
+.social {
+  min-height: 100vh;
+  background: #27272B;
+}
+
+#left-panel {
+  background: #3E3E3E;
+  min-height: 100vh;
+}
+
 @media (max-width: 575.98px) {
   .button {
     font-size: 10px;

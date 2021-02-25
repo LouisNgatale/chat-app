@@ -32,37 +32,21 @@ Route::group(['middleware'=>'auth'],function (){
         // Messaging Module
         Route::group(['prefix'=>'messaging'],function (){
             Route::get('/', [App\Http\Controllers\ChatController::class, 'index'])
-                ->name('home')
+                ->name('message')
                 ->middleware('auth:sanctum');
             });
     });
 
+    // Create profile for the first time
+    Route::group(['middleware'=> 'create_profile'],function (){
+        //Create Profile for the first time
+       Route::post('/create-profile',
+           [\App\Http\Controllers\ProfileController::class, 'store']
+       )->name('create-profile');
 
-    //Check if registration is complete
-   Route::post('/create-profile',
-       [\App\Http\Controllers\ProfileController::class, 'store']
-   )->name('create-profile');
-
-   Route::get('/register/profile',function (){
-        return view('auth.create_profile');
-   })->name('register-profile');
-
-   // API
+       Route::get('/register/profile',function (){
+            return view('auth.create_profile');
+       })->name('register-profile');
+    });
 });
-
-//Route::middleware(['auth:sanctum'])->group(function (){
-//    Route::get('/allUsers', [App\Http\Controllers\ApiEndpoints::class, 'allUsers']);
-//    Route::get('/conversation', [App\Http\Controllers\ApiEndpoints::class, 'allConversations']);
-//    Route::get('/getConversation/{id}', [App\Http\Controllers\ApiEndpoints::class, 'getConversation']);
-//    Route::post('/newConversation/{id}', [App\Http\Controllers\ApiEndpoints::class, 'createConversation']);
-//    Route::post('/sendMessage', [App\Http\Controllers\ApiEndpoints::class, 'sendMessage']);
-//    Route::post('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout']);
-//    Route::post('/makecall/{id}', [\App\Http\Controllers\VideoChatController::class, 'makeCall']);
-//    Route::post('/cancelCall/{id}', [\App\Http\Controllers\VideoChatController::class, 'cancel']);
-//    Route::post('/acceptCall/{id}', [\App\Http\Controllers\VideoChatController::class, 'accept']);
-//    Route::get('/search/{name}', [\App\Http\Controllers\ApiEndpoints::class, 'search']);
-//});
-
-
-//Api Endpoints
 

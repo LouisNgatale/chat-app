@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class CheckRegistrationCompletedMiddleware
+class CreateProfileMiddleware
 {
     /**
      * Handle an incoming request.
@@ -17,8 +17,8 @@ class CheckRegistrationCompletedMiddleware
     public function handle(Request $request, Closure $next)
     {
         if (is_null(auth()->user()->profile)){
-            return redirect()->route('register-profile');
-        }
         return $next($request);
+        }
+    return redirect()->route('home');
     }
 }
