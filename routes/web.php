@@ -15,24 +15,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-
-
-
-
 Route::group(['middleware'=>'auth'],function (){
-    //Completed Registration
+    //Has Completed Registration
     Route::group(['middleware' => ['complete_registration']], function (){
-        Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])
-            ->name('home')
-            ->middleware('auth:sanctum');
+
+        //Social Networking Module
+        Route::group([],function (){
+            Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])
+                ->name('home')
+                ->middleware('auth:sanctum');
+        });
+
+        // Messaging Module
+        Route::group(['prefix'=>'messaging'],function (){
+            Route::get('/', [App\Http\Controllers\ChatController::class, 'index'])
+                ->name('home')
+                ->middleware('auth:sanctum');
+            });
     });
 
+
+    //Check if registration is complete
    Route::post('/create-profile',
        [\App\Http\Controllers\ProfileController::class, 'store']
    )->name('create-profile');
@@ -40,26 +46,23 @@ Route::group(['middleware'=>'auth'],function (){
    Route::get('/register/profile',function (){
         return view('auth.create_profile');
    })->name('register-profile');
+
+   // API
 });
 
-
-
-
-
-
-
-
-
+//Route::middleware(['auth:sanctum'])->group(function (){
+//    Route::get('/allUsers', [App\Http\Controllers\ApiEndpoints::class, 'allUsers']);
+//    Route::get('/conversation', [App\Http\Controllers\ApiEndpoints::class, 'allConversations']);
+//    Route::get('/getConversation/{id}', [App\Http\Controllers\ApiEndpoints::class, 'getConversation']);
+//    Route::post('/newConversation/{id}', [App\Http\Controllers\ApiEndpoints::class, 'createConversation']);
+//    Route::post('/sendMessage', [App\Http\Controllers\ApiEndpoints::class, 'sendMessage']);
+//    Route::post('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout']);
+//    Route::post('/makecall/{id}', [\App\Http\Controllers\VideoChatController::class, 'makeCall']);
+//    Route::post('/cancelCall/{id}', [\App\Http\Controllers\VideoChatController::class, 'cancel']);
+//    Route::post('/acceptCall/{id}', [\App\Http\Controllers\VideoChatController::class, 'accept']);
+//    Route::get('/search/{name}', [\App\Http\Controllers\ApiEndpoints::class, 'search']);
+//});
 
 
 //Api Endpoints
-Route::get('/allUsers', [App\Http\Controllers\ApiEndpoints::class, 'allUsers'])->name('home');
-Route::get('/conversation', [App\Http\Controllers\ApiEndpoints::class, 'allConversations'])->name('home')->middleware('auth:sanctum');
-Route::get('/getConversation/{id}', [App\Http\Controllers\ApiEndpoints::class, 'getConversation'])->name('home')->middleware('auth:sanctum');
-Route::post('/newConversation/{id}', [App\Http\Controllers\ApiEndpoints::class, 'createConversation'])->name('home');
-Route::post('/sendMessage', [App\Http\Controllers\ApiEndpoints::class, 'sendMessage'])->name('home');
-Route::post('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout']);
-Route::post('/makecall/{id}', [\App\Http\Controllers\VideoChatController::class, 'makeCall']);
-Route::post('/cancelCall/{id}', [\App\Http\Controllers\VideoChatController::class, 'cancel']);
-Route::post('/acceptCall/{id}', [\App\Http\Controllers\VideoChatController::class, 'accept']);
-Route::get('/search/{name}', [\App\Http\Controllers\ApiEndpoints::class, 'search']);
+

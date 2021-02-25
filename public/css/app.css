@@ -11021,8 +11021,9 @@ a.text-dark:focus {
 
 .profile_finish {
   background: #27272B;
-  height: 100vh;
+  min-height: 100vh;
   color: #FFFFFF;
+  overflow: hidden;
 }
 
 .prof {
@@ -11077,6 +11078,12 @@ a.text-dark:focus {
 
 .file {
   display: none;
+}
+
+@media (max-width: 575.98px) {
+  .button {
+    font-size: 10px;
+  }
 }
 
 

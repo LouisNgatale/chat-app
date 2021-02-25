@@ -6,6 +6,7 @@ use App\Models\Address;
 use App\Models\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Intervention\Image\Facades\Image;
 
@@ -34,7 +35,7 @@ class ProfileController extends Controller
             // Get image path
             $imagePath = request('profile_pic')->store('uploads', 'public');
 
-            //Resize & store Image
+        //Resize & store Image
             $image = Image::make("storage/{$imagePath}")->fit(1200,1200);
             $image->save();
 
@@ -62,7 +63,7 @@ class ProfileController extends Controller
         $user->birthDate = $request->input('birthday');
         $user->save();
 
-        // Redirect user
-        return redirect('/home');
+
+        return Redirect::route('home');
     }
 }

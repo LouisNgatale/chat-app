@@ -18,7 +18,7 @@
         </div>
         <div>
             <div class="details">
-                <img alt="" class="mb-3"  v-bind:src="'/storage/' + image ">
+                <img alt="" class="mb-3"  v-bind:src=" image ">
                 <h4 class="details_username">{{ user }}</h4>
                 <span class="details_status">{{  status  }}</span>
             </div>

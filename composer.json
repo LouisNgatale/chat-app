@@ -15,6 +15,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "intervention/image": "^2.5",
         "khsing/world": "^0.9.0",
+        "kreait/laravel-firebase": "^3.1",
         "laravel/framework": "^8.12",
         "laravel/sanctum": "^2.9",
         "laravel/tinker": "^2.5",

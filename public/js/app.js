@@ -56755,10 +56755,7 @@ var render = function() {
     _vm._v(" "),
     _c("div", [
       _c("div", { staticClass: "details" }, [
-        _c("img", {
-          staticClass: "mb-3",
-          attrs: { alt: "", src: "/storage/" + _vm.image }
-        }),
+        _c("img", { staticClass: "mb-3", attrs: { alt: "", src: _vm.image } }),
         _vm._v(" "),
         _c("h4", { staticClass: "details_username" }, [
           _vm._v(_vm._s(_vm.user))

@@ -167,6 +167,7 @@ return [
          * Package Service Providers...
          */
         Khsing\World\WorldServiceProvider::class,
+        Kreait\Laravel\Firebase\ServiceProvider::class,
 
         /*
          * Application Service Providers...

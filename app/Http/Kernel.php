@@ -6,6 +6,7 @@ use App\Http\Middleware\AuthKey;
 use App\Http\Middleware\CheckRegistrationCompletedMiddleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 use Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful;
+use Laravel\Sanctum\Sanctum;
 
 
 class Kernel extends HttpKernel
@@ -44,10 +45,9 @@ class Kernel extends HttpKernel
         ],
 
         'api' => [
-            EnsureFrontendRequestsAreStateful::class,
+            \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            AuthKey::class
         ],
     ];
 

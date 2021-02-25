@@ -4,37 +4,33 @@
     <div class="profile_finish">
 
         <div class="w-75 container-fluid">
-
             <div class="container">
-                    <div class="row  justify-content-center">
-                        <div class="col">
-                                <div class="row ">
-                                    <div class="">
-                                        <h5 class="">{{ \Illuminate\Support\Facades\Auth::user()->firstName }}  {{ \Illuminate\Support\Facades\Auth::user()->secondName }}</h5>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="">
-                                        <h5 class="">{{ \Illuminate\Support\Facades\Auth::user()->email }}</h5>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="">
-                                        <div class="mb-3">
-                                            <label for="image" class="@error('profile_pic') is-invalid @enderror btn button">
-                                                Choose profile picture
-                                            </label>
-                                            @error('profile_pic')
-                                            <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="row pt-5 align-items-center">
+                        <div class="col-md-3 col-4 p-lg-5 p-md-3 mr-0 container-fluid">
+                            <img class="rounded-circle w-100 img-fluid" src="/images/blank.png" alt="">
                         </div>
-                        <div class="col">
-                            <img class="prof w-50 img-fluid" src="/images/blank.png" alt="">
+
+                        <div class="col-md-9 col-8  p-3 pl-0 align-items-end">
+                            <div class="">
+                                <div class="">
+                                    <span class="my-2">{{ \Illuminate\Support\Facades\Auth::user()->firstName }}  {{ \Illuminate\Support\Facades\Auth::user()->secondName }}</span>
+                                </div>
+                                <div class="">
+                                    <span class="my-2">{{ \Illuminate\Support\Facades\Auth::user()->email }}</span>
+                                </div>
+                                <div class="">
+                                    <div class="">
+                                        <label for="image" class="@error('profile_pic') is-invalid @enderror  btn button">
+                                            Choose profile picture
+                                        </label>
+                                        @error('profile_pic')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
             </div>
@@ -43,7 +39,7 @@
                 <h5>Profile</h5>
                 <hr class="border-white">
 
-                <div class="row justify-content-md-center">
+                <div class="row justify-content-center">
 
                     <form class="w-75" action="{{ route('create-profile') }}" enctype="multipart/form-data" method="POST">
                         @csrf
@@ -104,7 +100,6 @@
             </div>
 
         </div>
+
     </div>
-
-
 @endsection
