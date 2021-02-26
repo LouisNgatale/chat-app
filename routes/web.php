@@ -28,7 +28,6 @@ Route::group(['middleware'=>'auth'],function (){
                 ->name('home')
                 ->middleware('auth:sanctum');
 
-            Route::get('/user',[\App\Http\Controllers\UserController::class, 'index']);
 
         });
 
@@ -53,3 +52,17 @@ Route::group(['middleware'=>'auth'],function (){
     });
 });
 
+//Vue API Calls
+Route::group([], function (){
+    Route::get('/user',[\App\Http\Controllers\UserController::class, 'index']);
+    Route::get('/allUsers', [App\Http\Controllers\ApiEndpoints::class, 'allUsers']);
+    Route::get('/conversation', [App\Http\Controllers\ApiEndpoints::class, 'allConversations']);
+    Route::get('/getConversation/{id}', [App\Http\Controllers\ApiEndpoints::class, 'getConversation']);
+    Route::post('/newConversation/{id}', [App\Http\Controllers\ApiEndpoints::class, 'createConversation']);
+    Route::post('/sendMessage', [App\Http\Controllers\ApiEndpoints::class, 'sendMessage']);
+    Route::post('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout']);
+    Route::get('/search/{name}', [\App\Http\Controllers\ApiEndpoints::class, 'search']);
+    Route::post('/makecall/{id}', [\App\Http\Controllers\VideoChatController::class, 'makeCall']);
+    Route::post('/cancelCall/{id}', [\App\Http\Controllers\VideoChatController::class, 'cancel']);
+    Route::post('/acceptCall/{id}', [\App\Http\Controllers\VideoChatController::class, 'accept']);
+});

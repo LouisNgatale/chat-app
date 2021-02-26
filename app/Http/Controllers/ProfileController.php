@@ -6,6 +6,7 @@ use App\Models\Address;
 use App\Models\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Intervention\Image\Facades\Image;
@@ -14,6 +15,7 @@ class ProfileController extends Controller
 {
     public function store(Request $request) {
         $user = Auth::user();
+        $id = Auth::id();
 
         $v = Validator::make($request->all(), [
             'birthday' => 'nullable | before:18 years ago',
@@ -33,36 +35,32 @@ class ProfileController extends Controller
 
         //Create new profile model
             // Get image path
-            $imagePath = request('profile_pic')->store('uploads', 'public');
+            $imagePath = request('profile_pic')->store('uploads/profile', 'public');
 
         //Resize & store Image
             $image = Image::make("storage/{$imagePath}")->fit(1200,1200);
             $image->save();
 
-        // Save profile
-        $new_profile = new Profile([
+
+        // Create & save profile
+        $profile_id = DB::table('profiles')->insertGetId([
             'status' => $request->input('status'),
             'bio' => $request->input('bio'),
+            'user_id' => $id ,
             'profile_image' => $imagePath
         ]);
-        $user->profile()->save($new_profile);
 
-        //Create new address model
-        $address = new Address([
-            'country' => $request->input('country')
+        //Create & save address
+        DB::table('addresses')->insert([
+            'country' => $request->input('country'),
+            'profile_id' => $profile_id
         ]);
-
-        //Save address
-        $address = $user->address();
-        $profile = $user->profile;
-        $profile->address()->save($address);
 
 
         //Save birthdate
         $user->birthDate = $request->input('birthday');
         $user->save();
-//
-//
+
         return Redirect::route('home');
     }
 }
