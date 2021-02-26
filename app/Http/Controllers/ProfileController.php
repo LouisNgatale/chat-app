@@ -39,22 +39,21 @@ class ProfileController extends Controller
             $image = Image::make("storage/{$imagePath}")->fit(1200,1200);
             $image->save();
 
-        $profile = new Profile([
+        // Save profile
+        $new_profile = new Profile([
             'status' => $request->input('status'),
             'bio' => $request->input('bio'),
             'profile_image' => $imagePath
         ]);
-
-        // Save profile
-        $user->profile()->save($profile);
+        $user->profile()->save($new_profile);
 
         //Create new address model
         $address = new Address([
             'country' => $request->input('country')
         ]);
 
-
         //Save address
+        $address = $user->address();
         $profile = $user->profile;
         $profile->address()->save($address);
 
@@ -62,8 +61,8 @@ class ProfileController extends Controller
         //Save birthdate
         $user->birthDate = $request->input('birthday');
         $user->save();
-
-
+//
+//
         return Redirect::route('home');
     }
 }

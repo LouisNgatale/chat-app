@@ -5,11 +5,11 @@
                 <img src="/images/Icon%20feather-settings@2x.png" alt="">
             </div>
             <div id="menu">
-                <div class="menu-item">
-                    <span>Profile</span>
+                <div @click="Home" class="menu-item">
+                    <span>Home</span>
                 </div>
                 <div class="menu-item">
-                    <span>Settings</span>
+                    <span>Profile</span>
                 </div>
                 <div @click="logout" class="menu-item">
                     <span>Log Out</span>
@@ -45,7 +45,10 @@ export default {
                 }).catch((e)=>{
                     console.log(e)
                 })
-            }
+            },
+        Home:()=>{
+            window.location.href = '/';
+        }
     }
 }
 </script>

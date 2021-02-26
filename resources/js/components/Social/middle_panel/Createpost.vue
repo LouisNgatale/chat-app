@@ -4,11 +4,11 @@
     <div class="row p-4 align-items-center justify-content-center">
         <!--   Profile Picture   -->
         <div class="col-md-2 pr-0">
-            <img src="images/blank.png" class=" rounded-circle w-50 img-fluid" alt="">
+            <img :src="'/storage/' + image" class=" rounded-circle w-50 img-fluid" alt="">
         </div>
         <!--   Input new Post   -->
         <div class="col-md-10 pl-0">
-            <input type="text" class="float-left w-100 text-white" placeholder="What's on your mind?">
+            <input type="text" class="float-left w-100 text-white" :placeholder="'What\'s on your mind, @' + userName +'?'">
         </div>
     </div>
     <div class="row">
@@ -32,9 +32,20 @@
 </div>
 </template>
 
+import { mapState } from 'vuex';
+import {mapActions} from 'vuex';
+import {mapGetters} from 'vuex';
 <script>
+import {mapGetters} from "vuex";
+
 export default {
-name: "Createpost"
+name: "Createpost",
+    computed:{
+        ...mapGetters([
+            'image',
+            'userName'
+        ])
+    }
 }
 </script>
 

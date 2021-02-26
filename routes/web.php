@@ -20,16 +20,19 @@ Auth::routes();
 
 Route::group(['middleware'=>'auth'],function (){
     //Has Completed Registration
-    Route::group(['middleware' => ['complete_registration']], function (){
+    Route::group(['middleware' => 'complete_registration'], function (){
 
-        //Social Networking Module
+        //Social Networking Module Web Routes
         Route::group([],function (){
             Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])
                 ->name('home')
                 ->middleware('auth:sanctum');
+
+            Route::get('/user',[\App\Http\Controllers\UserController::class, 'index']);
+
         });
 
-        // Messaging Module
+        // Messaging Module Web Routes
         Route::group(['prefix'=>'messaging'],function (){
             Route::get('/', [App\Http\Controllers\ChatController::class, 'index'])
                 ->name('message')

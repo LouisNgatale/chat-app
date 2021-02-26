@@ -1,8 +1,14 @@
 <template>
 <div class="text-white w-100 nav-container container-fluid">
-    <div style="height: 100%" class="row justify-content-center align-items-center">
+    <div style="height: 100%" class="row justify-content-center  align-items-center">
         <div class="col-4">
-            <input type="text" class="w-100" placeholder="Search">
+            <span>Social Meet</span>
+        </div>
+        <div class="col-6">
+            <input type="text" class="w-75" placeholder="Search">
+        </div>
+        <div class="col-2">
+            <img src="/images/messaging.png" @click="chat" style="cursor: pointer" class="img-fluid float-right" alt="">
         </div>
     </div>
 </div>
@@ -10,7 +16,12 @@
 
 <script>
 export default {
-name: "Navbar"
+name: "Navbar",
+    methods:{
+        chat:()=>{
+            window.location.href = '/messaging';
+        }
+    }
 }
 </script>
 

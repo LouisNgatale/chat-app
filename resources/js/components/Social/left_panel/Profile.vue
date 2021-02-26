@@ -1,24 +1,28 @@
 <template>
     <div class="social_profile container-fluid">
+
         <!--   Profile Picture   -->
         <div class="row justify-content-center ">
             <div class=" p-3 align-items-center">
-                <img src="images/blank.png" class="rounded-circle w-50 img-fluid" alt="">
+                <img :src="'/storage/' + image" class="rounded-circle w-50 img-fluid" alt="">
             </div>
         </div>
+
         <!--   Profile Name & username     -->
         <div class="row">
             <div class="col p-0">
-                <p class="m-0">Maria Kuzmina</p>
-                <p class="username">@mariakuzmina</p>
+                <p class="m-0">{{ name }}</p>
+                <p class="username">@{{ userName }}</p>
             </div>
         </div>
+
         <!--   Profile Count  -->
         <div class="row post_counts justify-content-between  mb-2">
             <div class="col p-0">200 Posts</div>
             <div class="col p-0">200 Followers</div>
             <div class="col p-0">200 Following</div>
         </div>
+
         <!--   Profile Bio  -->
         <div class="row">
             <div class="col p-0">
@@ -32,13 +36,14 @@
                     <div class="row">
                         <div class="col p-0 ">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto debitis deserunt doloribus excepturi explicabo, ipsum, natus nulla praesentium quibusdam quos suscipit vel veniam. Adipisci consectetur eligendi molestiae pariatur suscipit!
+                                {{ bio }}
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <!--   Profile Update Btn -->
         <div class="row">
             <button class="btn btn-primary">Update</button>
@@ -47,8 +52,31 @@
 </template>
 
 <script>
+
+import { mapState } from 'vuex';
+import {mapActions} from 'vuex';
+import {mapGetters} from 'vuex';
+
 export default {
-name: "Profile"
+name: "Profile",
+    computed: {
+        ...mapGetters([
+            'name',
+            'userName',
+            'bio',
+            'payload',
+            'image'
+        ])
+    },
+    methods:{
+        ...mapActions([
+            'getUser'
+        ]),
+    },
+
+    created() {
+        this.getUser()
+    }
 
 }
 </script>

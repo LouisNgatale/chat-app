@@ -7,6 +7,8 @@
 require('./bootstrap');
 
 window.Vue = require('vue').default;
+import {store} from './store/store'
+import { mapState } from 'vuex'
 
 /**
  * The following block of code may be used to automatically register your
@@ -44,4 +46,5 @@ export const bus = new Vue();
 
 const app = new Vue({
     el: '#app',
+    store
 });
