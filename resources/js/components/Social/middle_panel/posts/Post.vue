@@ -1,7 +1,7 @@
 <template>
 <div>
     <!--   Post   -->
-    <div v-for="post in posts" class="post mt-4 mb-4 container-fluid text-white">
+    <div v-for="post in posts" class="post py-2 mt-4 mb-4 container-fluid text-white">
         <!--   Header   -->
         <div class="row pt-3 pb-3 pl-3 pr-3 ">
             <div class="col-9">
@@ -70,13 +70,23 @@
         </div>
 
         <!--   Add Comment   -->
-        <div class="row"></div>
+        <div class="row align-items-center my-2">
+
+            <!--   Input new Post   -->
+            <div class="ml-2">
+                <img :src="'/storage/' + displayImage" class="rounded-circle dp img-fluid" alt="">
+            </div>
+            <div class="col">
+                <input type="text" v-model="caption" name="caption" class="float-left w-100 text-white" placeholder="Write new comment">
+            </div>
+        </div>
     </div>
 </div>
 </template>
 
 <script>
 import comment from "../comments/MainComment";
+import {mapGetters} from "vuex";
 export default {
 name: "Post",
     components:{ comment },
@@ -99,6 +109,12 @@ name: "Post",
             }).catch((error)=>{
             console.log(error);
         })
+    },
+    computed:{
+        ...mapGetters([
+            'displayImage',
+            'userName'
+        ]),
     }
 }
 </script>
@@ -114,8 +130,33 @@ name: "Post",
     height: 40px;
     width: auto;
 }
-
+input{
+    border-radius: 10px;
+    background: $border;
+    border: none;
+    padding: 5px 15px;
+    color: $color;
+    outline: none;
+    width: 100%;
+}
+.dp{
+    height: 40px;
+}
 hr{
     background: $border;
+}
+
+//Placeholder color
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $sub_heading;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $sub_heading;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: $sub_heading;
 }
 </style>
