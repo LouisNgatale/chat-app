@@ -1,6 +1,32 @@
 <template>
-    <div class="container subcomment py-2">
-        <div class="row justify-content-center">
+    <div class="w-100 subcomment py-2">
+        <div class="comment_container">
+            <div id="comment_auth_img " class="mr-2">
+                <img src="/images/blank.png" class="rounded-circle dp img-fluid" alt="">
+            </div>
+            <div id="comment_body_container">
+                <div class="author font-italic">Author Name</div>
+                <div id="comment_body">
+                    <div>{{ child.body }}</div>
+                    <div>
+                        <div class="text-left comment-actions">
+                            <span class="mr-2">1h ago</span>
+                            <span class="mr-2"><img src="/images/skips.png" alt=""></span>
+                            <span class="mr-2">2 replies</span>
+                            <span class="mr-2"><img src="/images/skips.png" alt=""></span>
+                            <span class="mr-2">1h Reply</span>
+                        </div>
+                    </div>
+                    <div id="sub_comment_container">
+                        <div class="">
+<!--                            <subComment v-for="child in child.childComments" :key="child" v-bind:child="child"></subComment>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="row justify-content-center">
             <div class="col-1 left_border pr-0">
                 <div class="pr-2">
                     <img src="/images/blank.png" class="rounded-circle float-right w-100 img-fluid" alt="">
@@ -24,7 +50,7 @@
                 </div>
 
             </div>
-        </div>
+        </div>-->
     </div>
 </template>
 
@@ -44,14 +70,33 @@ name: "SubComments",
 .subcomment{
     color: $sub_heading;
 }
+.dp{
+    height: 30px;
+    width: auto;
+}
+.comment_container{
+    display: flex;
+    flex-direction: row;
+    #comment_body_container{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        #comment_body{
+            display: flex;
+            flex-direction: column;
+            #sub_comment_container{
+
+            }
+        }
+    }
+}
 .left_border{
     border-left: 2px solid $border;
 }
-
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
     .comment-actions span{
-        font-size: .7rem;
+        font-size: .6rem;
     }
 }
 

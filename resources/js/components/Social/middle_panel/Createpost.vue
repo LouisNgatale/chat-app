@@ -23,7 +23,6 @@
 
         <!--   Bottom row   -->
         <div class="row align-items-center">
-
             <div class="col-4">
                 <label class="row align-items-center" for="post_image">
                     <div class="col pr-1">
@@ -38,7 +37,6 @@
             <div class="col-8">
 <!--                <button class="btn btn-primary" @click="validate">Add post</button>-->
                 <input type="submit" class="btn btn-primary" value="Add post" >
-                {{ caption}}
             </div>
         </div>
     </form>

@@ -4,31 +4,31 @@
 
         <div class="row">
             <div class="col">
-                <a href="">~ #blacklivesmatter</a>
+                <a class="text-decoration-none" href="">~ #blacklivesmatter</a>
+                <p class=" m-0 ml-3">50 posts</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a class="text-decoration-none" href="">~ #blacklivesmatter</a>
                 <p class="m-0 ml-3">50 posts</p>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <a href="">~ #blacklivesmatter</a>
+                <a class="text-decoration-none" href="">~ #blacklivesmatter</a>
                 <p class="m-0 ml-3">50 posts</p>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <a href="">~ #blacklivesmatter</a>
+                <a class="text-decoration-none" href="">~ #blacklivesmatter</a>
                 <p class="m-0 ml-3">50 posts</p>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <a href="">~ #blacklivesmatter</a>
-                <p class="m-0 ml-3">50 posts</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <a href="">~ #blacklivesmatter</a>
+                <a class="text-decoration-none" href="">~ #blacklivesmatter</a>
                 <p class="m-0 ml-3">50 posts</p>
             </div>
         </div>
