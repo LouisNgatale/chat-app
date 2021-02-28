@@ -13,6 +13,7 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
+        //TODO: Make privacy public by default
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('caption')->nullable();

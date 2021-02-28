@@ -1,7 +1,7 @@
 <template>
 <div>
     <!--   Post   -->
-    <div class="post mt-4 mb-4 container-fluid text-white">
+    <div v-for="post in posts" class="post mt-4 mb-4 container-fluid text-white">
         <!--   Header   -->
         <div class="row pt-3 pb-3 pl-3 pr-3 ">
             <div class="col-9">
@@ -21,16 +21,14 @@
         <!--   Caption   -->
         <div class="row">
             <div class="col pb-2">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda corporis, dolore est harum illo iure, iusto molestias natus neque nihil obcaecati odio quibusdam reprehenderit, rerum sequi ut voluptatibus. Nam, perferendis?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda corporis, dolore est harum illo iure, iusto molestias natus neque nihil obcaecati odio quibusdam reprehenderit, rerum sequi ut voluptatibus. Nam, perferendis?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda corporis, dolore est harum illo iure, iusto molestias natus neque nihil obcaecati odio quibusdam reprehenderit, rerum sequi ut voluptatibus. Nam, perferendis?
+                {{ post.caption }}
             </div>
         </div>
 
         <!--   Picture   -->
         <div class="row">
             <div class="col p-0">
-                <img src="images/female_1.png" class="img-fluid" alt="">
+                <img :src="'/storage/' + post.media" class="img-fluid" alt="">
             </div>
         </div>
 
@@ -67,7 +65,9 @@
             </div>
 
         <!--   Comments   -->
-        <div class="row"></div>
+        <div class="row">
+            <comment v-for="comment in post.comments" :key="comment" v-bind:comment="comment"></comment>
+        </div>
 
         <!--   Add Comment   -->
         <div class="row"></div>
@@ -76,8 +76,30 @@
 </template>
 
 <script>
+import comment from "../comments/MainComment";
 export default {
-name: "Post"
+name: "Post",
+    components:{ comment },
+    data(){
+        return{
+            posts: [],
+        }
+
+    },
+    created() {
+        axios.get('/posts')
+            .then((response)=>{
+                let posts = [];
+                let array = response.data.data;
+
+                response.data.data.forEach((x) => {
+                    this.posts.push(x);
+                })
+
+            }).catch((error)=>{
+            console.log(error);
+        })
+    }
 }
 </script>
 

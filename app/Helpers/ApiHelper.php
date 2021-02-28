@@ -6,7 +6,7 @@ namespace App\Helpers;
 
 class ApiHelper
 {
-    public static function apiResponse($is_error, $code, $message, $data) {
+    public static function apiResponse($is_error, $code, $message, $data = null) {
         $result = [];
 
         if ($is_error){

@@ -38,7 +38,7 @@ class UserController extends Controller
 //         return $bio;
     }
 
-    public function create() {
+    public function create(Request $request) {
         //
     }
 

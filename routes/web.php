@@ -55,6 +55,9 @@ Route::group(['middleware'=>'auth'],function (){
 //Vue API Calls
 Route::group([], function (){
     Route::get('/user',[\App\Http\Controllers\UserController::class, 'index']);
+    Route::post('/createPost',[\App\Http\Controllers\PostController::class, 'store']);
+    Route::get('/posts',[\App\Http\Controllers\PostController::class,'index']);
+
     Route::get('/allUsers', [App\Http\Controllers\ApiEndpoints::class, 'allUsers']);
     Route::get('/conversation', [App\Http\Controllers\ApiEndpoints::class, 'allConversations']);
     Route::get('/getConversation/{id}', [App\Http\Controllers\ApiEndpoints::class, 'getConversation']);

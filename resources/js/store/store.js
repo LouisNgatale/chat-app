@@ -28,7 +28,7 @@ export const store  = new Vuex.Store({
         payload:(state) =>{
             return state.user.payload
         },
-        image:(state) =>{
+        displayImage:(state) =>{
             return state.user.image
         }
     },

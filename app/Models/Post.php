@@ -14,7 +14,7 @@ class Post extends Model
     }
 
     public function comment() {
-        return $this->hasMany(Comment::class);
+        return $this->hasMany(Comment::class)->where('isMain','=',1);
     }
 
     public function tag() {

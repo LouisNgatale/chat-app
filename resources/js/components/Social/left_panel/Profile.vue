@@ -4,7 +4,7 @@
         <!--   Profile Picture   -->
         <div class="row justify-content-center ">
             <div class=" p-3 align-items-center">
-                <img :src="'/storage/' + image" class="rounded-circle w-50 img-fluid" alt="">
+                <img :src="'/storage/' + displayImage" class="rounded-circle w-50 img-fluid" alt="">
             </div>
         </div>
 
@@ -65,7 +65,7 @@ name: "Profile",
             'userName',
             'bio',
             'payload',
-            'image'
+            'displayImage'
         ])
     },
     methods:{

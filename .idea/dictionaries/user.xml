@@ -2,6 +2,7 @@
   <dictionary name="user">
     <words>
       <w>createpost</w>
+      <w>formdata</w>
       <w>makecall</w>
     </words>
   </dictionary>

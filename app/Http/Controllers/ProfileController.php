@@ -21,7 +21,6 @@ class ProfileController extends Controller
             'birthday' => 'nullable | before:18 years ago',
             'status' => 'string|min:1|max:30|nullable',
             'bio' => 'string|min:1|max:32|nullable',
-            'profile_pic' => '',
             'country' => 'required'
         ], // rules
             ['before' => 'You must be at least 18 years old',], // messages
@@ -35,7 +34,8 @@ class ProfileController extends Controller
 
         //Create new profile model
             // Get image path
-            $imagePath = request('profile_pic')->store('uploads/profile', 'public');
+        // TODO: Make the image path unique
+        $imagePath = request('profile_pic')->store('uploads/profile', 'public');
 
         //Resize & store Image
             $image = Image::make("storage/{$imagePath}")->fit(1200,1200);

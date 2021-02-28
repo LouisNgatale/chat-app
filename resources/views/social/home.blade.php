@@ -9,13 +9,13 @@
 
         <div class="row">
         {{-- Left Panel --}}
-            <div id="left-panel" class="col-md-3 ">
+            <div id="left-panel" class="col-sm-3 ">
                 {{-- Profile Component --}}
                     <Profile></Profile>
             </div>
 
         {{-- Middle Panel --}}
-            <div id="middle-panel" class="col-md-6">
+            <div id="middle-panel" class="col-sm-6">
                 {{-- New Post Component --}}
                 <div class="row">
                     <div class="col">
@@ -33,7 +33,7 @@
             </div>
 
         {{-- Right Panel --}}
-            <div id="right-panel" class=" col-md-3">
+            <div id="right-panel" class=" col-sm-3">
                 {{-- Trending Component --}}
                 <div class="row">
                     <div class="col p-0 pr-3">
