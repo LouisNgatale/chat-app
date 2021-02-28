@@ -59248,7 +59248,9 @@ var render = function() {
                 attrs: { type: "submit", value: "Add post" }
               }),
               _vm._v(
-                "\n                " + _vm._s(_vm.caption) + "\n            "
+                "\r\n                " +
+                  _vm._s(_vm.caption) +
+                  "\r\n            "
               )
             ])
           ])
@@ -59323,9 +59325,9 @@ var render = function() {
             _vm._v(" "),
             _c("div", [
               _vm._v(
-                "\n                    " +
+                "\r\n                    " +
                   _vm._s(_vm.comment.body) +
-                  "\n                "
+                  "\r\n                "
               )
             ]),
             _vm._v(" "),
@@ -59491,7 +59493,9 @@ var render = function() {
           _c("div", { staticClass: "row" }, [
             _c("div", { staticClass: "col pb-2" }, [
               _vm._v(
-                "\n                " + _vm._s(post.caption) + "\n            "
+                "\r\n                " +
+                  _vm._s(post.caption) +
+                  "\r\n            "
               )
             ])
           ]),
