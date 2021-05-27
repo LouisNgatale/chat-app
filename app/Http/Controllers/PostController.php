@@ -16,7 +16,7 @@ class PostController extends Controller
 
     public function index()
     {
-        return  new PostCollection(Post::all()->sortBy('created_at'));
+        return  new PostCollection(Post::all());
     }
 
 

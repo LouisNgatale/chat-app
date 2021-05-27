@@ -18,6 +18,8 @@ class RenameCommentsTable extends Migration
             $table->boolean('isMain')->default(true);
             $table->boolean('hasParent')->default(false);
             $table->unsignedBigInteger('parentId')->nullable();
+            $table->index('parentId');
+            $table->foreignId('authorId');
         });
     }
 
@@ -28,8 +30,6 @@ class RenameCommentsTable extends Migration
      */
     public function down()
     {
-        Schema::table('comments', function (Blueprint $table) {
-            //
-        });
+        //
     }
 }

@@ -2795,7 +2795,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       if (!this.caption && this.image == null) {
         console.log("Empty");
       } else {
-        axios.post("/createPost", data, {
+        axios.post("/post/create", data, {
           headers: {
             'content-type': 'multipart/form-data'
           }
@@ -2873,26 +2873,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "MainComment",
@@ -2919,6 +2899,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3091,6 +3077,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -3100,8 +3087,23 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   data: function data() {
     return {
-      posts: []
+      posts: [],
+      new_comment: ""
     };
+  },
+  methods: {
+    addComment: function addComment(e) {
+      console.log(e); // if (this.new_comment !== ""){
+      //     axios.post("/comment/create", {
+      //             "body" : this.new_comment,
+      //             "post_id": post.id
+      //     }).then((response) => {
+      //         console.log(response)
+      //     }).catch((error) => {
+      //         console.log(error)
+      //     });
+      // }
+    }
   },
   created: function created() {
     var _this = this;
@@ -10125,7 +10127,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".author[data-v-8ea4b1ee],\n.comment-actions[data-v-8ea4b1ee] {\n  color: #AAAAAA;\n}\n.dp[data-v-8ea4b1ee] {\n  height: 40px;\n  width: auto;\n}\n.comment_container[data-v-8ea4b1ee] {\n  display: flex;\n  flex-direction: row;\n}\n.comment_container #comment_body_container[data-v-8ea4b1ee] {\n  width: 90%;\n  display: flex;\n  flex-direction: column;\n}\n.comment_container #comment_body_container #comment_body[data-v-8ea4b1ee] {\n  display: flex;\n  flex-direction: column;\n}\n@media (max-width: 575.98px) {\n.comment-actions span[data-v-8ea4b1ee] {\n    font-size: 0.6rem;\n}\n}\n@media (max-width: 767.98px) {\n.comment-actions[data-v-8ea4b1ee] {\n    font-size: 0.6rem;\n}\n}\n@media (max-width: 991.98px) {\n.comment-actions[data-v-8ea4b1ee] {\n    font-size: 0.6rem;\n}\n}\n@media (max-width: 1199.98px) {\n.comment-actions[data-v-8ea4b1ee] {\n    font-size: 0.7rem;\n}\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".author[data-v-8ea4b1ee],\n.comment-actions[data-v-8ea4b1ee] {\n  color: #AAAAAA;\n}\n.reply[data-v-8ea4b1ee] {\n  cursor: pointer;\n}\n.reply[data-v-8ea4b1ee]:hover {\n  color: #848484;\n}\n.dp[data-v-8ea4b1ee] {\n  height: 40px;\n  width: auto;\n}\n.comment_container[data-v-8ea4b1ee] {\n  display: flex;\n  flex-direction: row;\n}\n.comment_container #comment_body_container[data-v-8ea4b1ee] {\n  width: 90%;\n  display: flex;\n  flex-direction: column;\n}\n.comment_container #comment_body_container #comment_body[data-v-8ea4b1ee] {\n  display: flex;\n  flex-direction: column;\n}\n@media (max-width: 575.98px) {\n.comment-actions span[data-v-8ea4b1ee] {\n    font-size: 0.6rem;\n}\n}\n@media (max-width: 767.98px) {\n.comment-actions[data-v-8ea4b1ee] {\n    font-size: 0.6rem;\n}\n}\n@media (max-width: 991.98px) {\n.comment-actions[data-v-8ea4b1ee] {\n    font-size: 0.6rem;\n}\n}\n@media (max-width: 1199.98px) {\n.comment-actions[data-v-8ea4b1ee] {\n    font-size: 0.7rem;\n}\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10149,7 +10151,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".subcomment[data-v-31de76a8] {\n  color: #AAAAAA;\n}\n.dp[data-v-31de76a8] {\n  height: 30px;\n  width: auto;\n}\n.comment_container[data-v-31de76a8] {\n  display: flex;\n  flex-direction: row;\n}\n.comment_container #comment_body_container[data-v-31de76a8] {\n  width: 90%;\n  display: flex;\n  flex-direction: column;\n}\n.comment_container #comment_body_container #comment_body[data-v-31de76a8] {\n  display: flex;\n  flex-direction: column;\n}\n.left_border[data-v-31de76a8] {\n  border-left: 2px solid #707070;\n}\n@media (max-width: 575.98px) {\n.comment-actions span[data-v-31de76a8] {\n    font-size: 0.6rem;\n}\n}\n@media (max-width: 767.98px) {\n.comment-actions[data-v-31de76a8] {\n    font-size: 0.6rem;\n}\n}\n@media (max-width: 991.98px) {\n.comment-actions[data-v-31de76a8] {\n    font-size: 0.6rem;\n}\n}\n@media (max-width: 1199.98px) {\n.comment-actions[data-v-31de76a8] {\n    font-size: 0.7rem;\n}\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".subcomment[data-v-31de76a8] {\n  color: #AAAAAA;\n}\n.reply[data-v-31de76a8] {\n  cursor: pointer;\n}\n.reply[data-v-31de76a8]:hover {\n  color: #848484;\n}\n.dp[data-v-31de76a8] {\n  height: 30px;\n  width: auto;\n}\n.comment_container[data-v-31de76a8] {\n  display: flex;\n  flex-direction: row;\n}\n.comment_container #comment_body_container[data-v-31de76a8] {\n  width: 90%;\n  display: flex;\n  flex-direction: column;\n}\n.comment_container #comment_body_container #comment_body[data-v-31de76a8] {\n  display: flex;\n  flex-direction: column;\n}\n.left_border[data-v-31de76a8] {\n  border-left: 2px solid #707070;\n}\n@media (max-width: 575.98px) {\n.comment-actions span[data-v-31de76a8] {\n    font-size: 0.6rem;\n}\n}\n@media (max-width: 767.98px) {\n.comment-actions[data-v-31de76a8] {\n    font-size: 0.6rem;\n}\n}\n@media (max-width: 991.98px) {\n.comment-actions[data-v-31de76a8] {\n    font-size: 0.6rem;\n}\n}\n@media (max-width: 1199.98px) {\n.comment-actions[data-v-31de76a8] {\n    font-size: 0.7rem;\n}\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -59390,7 +59392,31 @@ var render = function() {
         _c("div", { attrs: { id: "comment_body" } }, [
           _c("div", [_vm._v(_vm._s(_vm.comment.body))]),
           _vm._v(" "),
-          _vm._m(1),
+          _c("div", [
+            _c("div", { staticClass: "text-left comment-actions" }, [
+              _c("span", { staticClass: "mr-2" }, [_vm._v("1h ago")]),
+              _vm._v(" "),
+              _vm.comment.childComments
+                ? _c("div", { staticClass: "d-inline" }, [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mr-2" }, [
+                      _vm._v(
+                        _vm._s(_vm.comment.childComments.length) + " replies"
+                      )
+                    ])
+                  ])
+                : _c("div", { staticClass: "d-inline" }, [
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mr-2" }, [_vm._v("0 reply")])
+                  ]),
+              _vm._v(" "),
+              _vm._m(3),
+              _vm._v(" "),
+              _c("span", { staticClass: "mr-2 reply" }, [_vm._v("reply")])
+            ])
+          ]),
           _vm._v(" "),
           _c("div", { attrs: { id: "sub_comment_container" } }, [
             _c(
@@ -59427,22 +59453,24 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "text-left comment-actions" }, [
-        _c("span", { staticClass: "mr-2" }, [_vm._v("1h ago")]),
-        _vm._v(" "),
-        _c("span", { staticClass: "mr-2" }, [
-          _c("img", { attrs: { src: "/images/skips.png", alt: "" } })
-        ]),
-        _vm._v(" "),
-        _c("span", { staticClass: "mr-2" }, [_vm._v("2 replies")]),
-        _vm._v(" "),
-        _c("span", { staticClass: "mr-2" }, [
-          _c("img", { attrs: { src: "/images/skips.png", alt: "" } })
-        ]),
-        _vm._v(" "),
-        _c("span", { staticClass: "mr-2" }, [_vm._v("1h Reply")])
-      ])
+    return _c("span", { staticClass: "mr-2" }, [
+      _c("img", { attrs: { src: "/images/skips.png", alt: "" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "mr-2" }, [
+      _c("img", { attrs: { src: "/images/skips.png", alt: "" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "mr-2" }, [
+      _c("img", { attrs: { src: "/images/skips.png", alt: "" } })
     ])
   }
 ]
@@ -59480,9 +59508,29 @@ var render = function() {
         _c("div", { attrs: { id: "comment_body" } }, [
           _c("div", [_vm._v(_vm._s(_vm.child.body))]),
           _vm._v(" "),
-          _vm._m(1),
+          _c("div", { staticClass: "text-left comment-actions" }, [
+            _c("span", { staticClass: "mr-2" }, [_vm._v("1h ago")]),
+            _vm._v(" "),
+            _vm.child.childComments
+              ? _c("div", { staticClass: "d-inline" }, [
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mr-2" }, [
+                    _vm._v(_vm._s(_vm.child.childComments) + " replies")
+                  ])
+                ])
+              : _c("div", { staticClass: "d-inline" }, [
+                  _vm._m(2),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mr-2" }, [_vm._v("0 reply")])
+                ]),
+            _vm._v(" "),
+            _vm._m(3),
+            _vm._v(" "),
+            _c("span", { staticClass: "mr-2 reply" }, [_vm._v("reply")])
+          ]),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(4)
         ])
       ])
     ])
@@ -59508,22 +59556,24 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "text-left comment-actions" }, [
-        _c("span", { staticClass: "mr-2" }, [_vm._v("1h ago")]),
-        _vm._v(" "),
-        _c("span", { staticClass: "mr-2" }, [
-          _c("img", { attrs: { src: "/images/skips.png", alt: "" } })
-        ]),
-        _vm._v(" "),
-        _c("span", { staticClass: "mr-2" }, [_vm._v("2 replies")]),
-        _vm._v(" "),
-        _c("span", { staticClass: "mr-2" }, [
-          _c("img", { attrs: { src: "/images/skips.png", alt: "" } })
-        ]),
-        _vm._v(" "),
-        _c("span", { staticClass: "mr-2" }, [_vm._v("1h Reply")])
-      ])
+    return _c("span", { staticClass: "mr-2" }, [
+      _c("img", { attrs: { src: "/images/skips.png", alt: "" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "mr-2" }, [
+      _c("img", { attrs: { src: "/images/skips.png", alt: "" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "mr-2" }, [
+      _c("img", { attrs: { src: "/images/skips.png", alt: "" } })
     ])
   },
   function() {
@@ -59564,7 +59614,26 @@ var render = function() {
         "div",
         { staticClass: "post py-2 mt-4 mb-4 container-fluid text-white" },
         [
-          _vm._m(0, true),
+          _c("div", { staticClass: "row pt-3 pb-3 pl-3 pr-3 " }, [
+            _c("div", { staticClass: "col-9" }, [
+              _c("div", { staticClass: "row align-items-center" }, [
+                _c("img", {
+                  staticClass: "rounded-circle dp  ",
+                  attrs: { src: "/storage/" + post.author_picture, alt: "" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "col pl-2" }, [
+                  _c("p", { staticClass: "m-0" }, [
+                    _vm._v(_vm._s(post.author))
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "m-0" }, [_vm._v("5hrs")])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _vm._m(0, true)
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "row" }, [
             _c("div", { staticClass: "col pb-2" }, [
@@ -59615,8 +59684,8 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.caption,
-                    expression: "caption"
+                    value: _vm.new_comment,
+                    expression: "new_comment"
                   }
                 ],
                 staticClass: "float-left w-100 text-white",
@@ -59625,13 +59694,22 @@ var render = function() {
                   name: "caption",
                   placeholder: "Write new comment"
                 },
-                domProps: { value: _vm.caption },
+                domProps: { value: _vm.new_comment },
                 on: {
+                  keypress: function($event) {
+                    if (
+                      !$event.type.indexOf("key") &&
+                      _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                    ) {
+                      return null
+                    }
+                    return _vm.addComment($event)
+                  },
                   input: function($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.caption = $event.target.value
+                    _vm.new_comment = $event.target.value
                   }
                 }
               })
@@ -59648,28 +59726,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row pt-3 pb-3 pl-3 pr-3 " }, [
-      _c("div", { staticClass: "col-9" }, [
-        _c("div", { staticClass: "row align-items-center" }, [
-          _c("img", {
-            staticClass: "rounded-circle dp  ",
-            attrs: { src: "images/blank.png", alt: "" }
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "col pl-2" }, [
-            _c("p", { staticClass: "m-0" }, [_vm._v("Username")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "m-0" }, [_vm._v("5hrs")])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-3" }, [
-        _c("img", {
-          staticClass: "img-fluid float-right",
-          attrs: { src: "/images/menu_circles.png", alt: "" }
-        })
-      ])
+    return _c("div", { staticClass: "col-3" }, [
+      _c("img", {
+        staticClass: "img-fluid float-right",
+        attrs: { src: "/images/menu_circles.png", alt: "" }
+      })
     ])
   },
   function() {

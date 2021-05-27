@@ -75,9 +75,11 @@
                         </div>
 
                         <div class="mt-4 col-sm-6">
+
                             @php
                                 $countries = Countries::getList('en');
                             @endphp
+
                             <select name="country" class="@error('country') is-invalid @enderror form-group countries custom-select">
                                 <option  disabled>Choose your country</option>
                                 @foreach($countries as $country)

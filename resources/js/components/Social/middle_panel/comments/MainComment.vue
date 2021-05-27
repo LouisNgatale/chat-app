@@ -11,10 +11,17 @@
                 <div>
                     <div class="text-left comment-actions">
                         <span class="mr-2">1h ago</span>
+                        <div v-if="comment.childComments" class="d-inline">
+                            <span  class="mr-2"><img src="/images/skips.png" alt=""></span>
+                            <span class="mr-2">{{ comment.childComments.length }} replies</span>
+                        </div>
+                        <div v-else class="d-inline">
+                            <span  class="mr-2"><img src="/images/skips.png" alt=""></span>
+                            <span class="mr-2">0 reply</span>
+                        </div>
+
                         <span class="mr-2"><img src="/images/skips.png" alt=""></span>
-                        <span class="mr-2">2 replies</span>
-                        <span class="mr-2"><img src="/images/skips.png" alt=""></span>
-                        <span class="mr-2">1h Reply</span>
+                        <span class="mr-2 reply">reply</span>
                     </div>
                 </div>
                 <div id="sub_comment_container">
@@ -25,33 +32,6 @@
             </div>
         </div>
     </div>
-    <!--<div  class="container py-2  pl-0">
-        <div class="row justify-content-center">
-            <div class="col-1 pr-0">
-                <div class="pr-2">
-                    <img src="/images/blank.png" class="rounded-circle float-right w-100 img-fluid" alt="">
-                </div>
-            </div>
-
-            <div class="col-10  pl-0">
-                <span class="author font-italic">Name Here</span>
-                <div>
-                    {{ comment.body }}
-                </div>
-
-                <div class="row">
-                    <div class="col text-left comment-actions">
-                        <span class="mr-2">1h ago</span>
-                        <span class="mr-2"><img src="/images/skips.png" alt=""></span>
-                        <span class="mr-2">2 replies</span>
-                        <span class="mr-2"><img src="/images/skips.png" alt=""></span>
-                        <span class="mr-2">1h Reply</span>
-                    </div>
-                </div>
-                <subComment v-for="child in comment.childComments" :key="child" v-bind:child="child"></subComment>
-            </div>
-        </div>
-    </div>-->
 </div>
 </template>
 
@@ -75,6 +55,12 @@ export default {
 .author,
 .comment-actions{
     color: $sub_heading;
+}
+.reply{
+    cursor: pointer;
+    &:hover{
+        color: $sub_title;
+    }
 }
 .dp{
     height: 40px;

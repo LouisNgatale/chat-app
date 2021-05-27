@@ -66,7 +66,7 @@ name: "Createpost",
             if (!this.caption && this.image == null) {
                 console.log("Empty");
             } else {
-                axios.post("/createPost", data,{
+                axios.post("/post/create", data,{
                         headers:{
                             'content-type':'multipart/form-data'
                         }

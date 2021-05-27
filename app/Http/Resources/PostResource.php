@@ -17,6 +17,8 @@ class PostResource extends JsonResource
     {
         return [
             "id" => $this->id,
+            "author" => $this->user->firstName ." ". $this->user->secondName,
+            "author_picture" => $this->user->profile->profile_image,
             "caption" => $this->caption,
             "media" => $this->media,
             "privacy" => $this->privacy,

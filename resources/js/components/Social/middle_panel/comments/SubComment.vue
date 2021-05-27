@@ -8,14 +8,20 @@
                 <div class="author font-italic">Author Name</div>
                 <div id="comment_body">
                     <div>{{ child.body }}</div>
-                    <div>
-                        <div class="text-left comment-actions">
-                            <span class="mr-2">1h ago</span>
-                            <span class="mr-2"><img src="/images/skips.png" alt=""></span>
-                            <span class="mr-2">2 replies</span>
-                            <span class="mr-2"><img src="/images/skips.png" alt=""></span>
-                            <span class="mr-2">1h Reply</span>
+
+                    <div class="text-left comment-actions">
+                        <span class="mr-2">1h ago</span>
+                        <div v-if="child.childComments" class="d-inline">
+                            <span  class="mr-2"><img src="/images/skips.png" alt=""></span>
+                            <span class="mr-2">{{ child.childComments }} replies</span>
                         </div>
+                        <div v-else class="d-inline">
+                            <span  class="mr-2"><img src="/images/skips.png" alt=""></span>
+                            <span class="mr-2">0 reply</span>
+                        </div>
+
+                        <span class="mr-2"><img src="/images/skips.png" alt=""></span>
+                        <span class="mr-2 reply">reply</span>
                     </div>
                     <div id="sub_comment_container">
                         <div class="">
@@ -70,10 +76,17 @@ name: "SubComments",
 .subcomment{
     color: $sub_heading;
 }
+.reply{
+    cursor: pointer;
+    &:hover{
+        color: $sub_title;
+    }
+}
 .dp{
     height: 30px;
     width: auto;
 }
+
 .comment_container{
     display: flex;
     flex-direction: row;
@@ -90,6 +103,7 @@ name: "SubComments",
         }
     }
 }
+
 .left_border{
     border-left: 2px solid $border;
 }

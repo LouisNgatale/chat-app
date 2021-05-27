@@ -79,6 +79,7 @@
 
                 </div>
             </div>
+
             <div v-if="!empty" class="txtMsg-container">
                 <div class="input-group">
                     <input type="text" @keyup.enter="send" id="message_body" placeholder="New Message">

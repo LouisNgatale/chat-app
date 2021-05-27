@@ -12,9 +12,12 @@ class Comment extends Model
     protected $fillable = [
         'body',
         'post_id',
+        'created_at',
+        'updated_at',
         'isMain',
         'hasParent',
         'parentId',
+        'authorId',
     ];
 
     public function post() {

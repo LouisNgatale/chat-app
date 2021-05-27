@@ -1,14 +1,14 @@
 <template>
 <div>
     <!--   Post   -->
-    <div v-for="post in posts" class="post py-2 mt-4 mb-4 container-fluid text-white">
+    <div v-for="post in posts"  class="post py-2 mt-4 mb-4 container-fluid text-white">
         <!--   Header   -->
         <div class="row pt-3 pb-3 pl-3 pr-3 ">
             <div class="col-9">
                 <div class="row align-items-center">
-                    <img src="images/blank.png" class="rounded-circle dp  " alt="">
+                    <img :src="'/storage/' + post.author_picture" class="rounded-circle dp  " alt="">
                     <div class="col pl-2">
-                        <p class="m-0">Username</p>
+                        <p class="m-0">{{ post.author }}</p>
                         <p class="m-0">5hrs</p>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                 </div>
         </div>
 
-            <div class="row">
+        <div class="row">
                 <div class="col p-0">
                     <hr>
                 </div>
@@ -72,12 +72,13 @@
         <!--   Add Comment   -->
         <div class="row align-items-center my-2">
 
-            <!--   Input new Post   -->
+            <!--   Input new Comment   -->
             <div class="ml-2">
                 <img :src="'/storage/' + displayImage" class="rounded-circle dp img-fluid" alt="">
             </div>
+
             <div class="col">
-                <input type="text" v-model="caption" name="caption" class="float-left w-100 text-white" placeholder="Write new comment">
+                <input type="text" v-model="new_comment" @keypress.enter="addComment"  name="caption" class="float-left w-100 text-white" placeholder="Write new comment">
             </div>
         </div>
     </div>
@@ -93,8 +94,24 @@ name: "Post",
     data(){
         return{
             posts: [],
+            new_comment:""
         }
 
+    },
+    methods:{
+        addComment:function (e){
+            console.log(e)
+            // if (this.new_comment !== ""){
+            //     axios.post("/comment/create", {
+            //             "body" : this.new_comment,
+            //             "post_id": post.id
+            //     }).then((response) => {
+            //         console.log(response)
+            //     }).catch((error) => {
+            //         console.log(error)
+            //     });
+            // }
+        }
     },
     created() {
         axios.get('/posts')

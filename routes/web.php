@@ -27,8 +27,6 @@ Route::group(['middleware'=>'auth'],function (){
             Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])
                 ->name('home')
                 ->middleware('auth:sanctum');
-
-
         });
 
         // Messaging Module Web Routes
@@ -55,8 +53,13 @@ Route::group(['middleware'=>'auth'],function (){
 //Vue API Calls
 Route::group([], function (){
     Route::get('/user',[\App\Http\Controllers\UserController::class, 'index']);
-    Route::post('/createPost',[\App\Http\Controllers\PostController::class, 'store']);
+
+    //Posts
+    Route::post('/post/create',[\App\Http\Controllers\PostController::class, 'store']);
     Route::get('/posts',[\App\Http\Controllers\PostController::class,'index']);
+
+    //Comments
+    Route::get('/comment/create',[\App\Http\Controllers\CommentController::class,'create']);
 
     Route::get('/allUsers', [App\Http\Controllers\ApiEndpoints::class, 'allUsers']);
     Route::get('/conversation', [App\Http\Controllers\ApiEndpoints::class, 'allConversations']);
