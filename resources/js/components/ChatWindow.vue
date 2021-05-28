@@ -25,6 +25,9 @@
         props:['user','status','image'],
         methods:{
         },
+        created(){
+            console.log("Test");
+        }
     }
 </script>
 <style scoped lang="scss">
