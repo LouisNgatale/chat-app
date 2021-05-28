@@ -27,6 +27,9 @@
         },
         created(){
             console.log("Test");
+            console.log("Test");
+            console.log("Test");
+            console.log("Test");
         }
     }
 </script>
